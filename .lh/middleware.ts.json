@@ -1,0 +1,38 @@
+{
+    "sourceFile": "middleware.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1750850254286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750850260071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   }\r\n }\r\n \r\n export const config = {\r\n-  matcher: ['/','/modules/home/views'],\r\n+  matcher: ['/','/modules/about/views'],\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750851641657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n export function middleware(request: NextRequest) {\r\n     console.log(\"✅ Middleware is running for path:\", request.nextUrl.pathname);\r\n \r\n-  if (request.nextUrl.pathname === '/') {\r\n+  if (request.nextUrl.pathname == '/') {\r\n     return NextResponse.redirect(new URL('/modules/about/views', request.url));\r\n   }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1750852059341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \r\n   if (request.nextUrl.pathname == '/') {\r\n     return NextResponse.redirect(new URL('/modules/about/views', request.url));\r\n   }\r\n+   return NextResponse.next()\r\n }\r\n \r\n export const config = {\r\n   matcher: ['/','/modules/about/views'],\r\n"
+                },
+                {
+                    "date": 1750852073334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { NextRequest } from 'next/server';\r\n \r\n export function middleware(request: NextRequest) {\r\n     console.log(\"✅ Middleware is running for path:\", request.nextUrl.pathname);\r\n-\r\n+ const { pathname } = request.nextUrl\r\n   if (request.nextUrl.pathname == '/') {\r\n     return NextResponse.redirect(new URL('/modules/about/views', request.url));\r\n   }\r\n    return NextResponse.next()\r\n"
+                },
+                {
+                    "date": 1750852191632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n-// middleware.ts\r\n import { NextResponse } from 'next/server';\r\n import type { NextRequest } from 'next/server';\r\n \r\n export function middleware(request: NextRequest) {\r\n-    console.log(\"✅ Middleware is running for path:\", request.nextUrl.pathname);\r\n- const { pathname } = request.nextUrl\r\n-  if (request.nextUrl.pathname == '/') {\r\n-    return NextResponse.redirect(new URL('/modules/about/views', request.url));\r\n+  if (request.nextUrl.pathname === '/') {\r\n+    return NextResponse.redirect(new URL('/modules/home/views', request.url));\r\n   }\r\n-   return NextResponse.next()\r\n+\r\n+  return NextResponse.next();\r\n }\r\n \r\n export const config = {\r\n   matcher: ['/','/modules/about/views'],\r\n"
+                }
+            ],
+            "date": 1750850254286,
+            "name": "Commit-0",
+            "content": "// middleware.ts\r\nimport { NextResponse } from 'next/server';\r\nimport type { NextRequest } from 'next/server';\r\n\r\nexport function middleware(request: NextRequest) {\r\n    console.log(\"✅ Middleware is running for path:\", request.nextUrl.pathname);\r\n\r\n  if (request.nextUrl.pathname === '/') {\r\n    return NextResponse.redirect(new URL('/modules/about/views', request.url));\r\n  }\r\n}\r\n\r\nexport const config = {\r\n  matcher: ['/','/modules/home/views'],\r\n};"
+        }
+    ]
+}

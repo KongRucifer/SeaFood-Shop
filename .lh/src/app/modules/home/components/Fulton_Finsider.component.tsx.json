@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/modules/home/components/Fulton_Finsider.component.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1750855485381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750855604512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image from \"next/image\";\r\n-export default async function Content4() {\r\n+export default async function Fu() {\r\n   return (\r\n     <div className=\"relative w-full h-[40rem] overflow-hidden mb-10\">\r\n       <div>\r\n         <img\r\n"
+                },
+                {
+                    "date": 1750855611109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image from \"next/image\";\r\n-export default async function Fu() {\r\n+export default async function Fulton_() {\r\n   return (\r\n     <div className=\"relative w-full h-[40rem] overflow-hidden mb-10\">\r\n       <div>\r\n         <img\r\n"
+                }
+            ],
+            "date": 1750855485381,
+            "name": "Commit-0",
+            "content": "import Image from \"next/image\";\r\nexport default async function Content4() {\r\n  return (\r\n    <div className=\"relative w-full h-[40rem] overflow-hidden mb-10\">\r\n      <div>\r\n        <img\r\n          src=\"/images/celender2.png\"\r\n          alt=\"Seafood background\"\r\n          className=\"absolute  w-full h-full object-cover\"\r\n        />\r\n      </div>\r\n\r\n      <div className=\"relative z-10 flex flex-col md:flex-row items-center justify-start h-full text-center px-4 md:px-10 text-gray-800 bg-black/30 \">\r\n        <div className=\"max-w-sm  rounded-xl p-6 m-4 shadow-lg\">\r\n          <div className=\"w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow \">\r\n            <img\r\n              src=\"/images/puss.png\"\r\n              alt=\"Seafood Icon\"\r\n              className=\"w-12 h-12 hover-updown\"\r\n            />\r\n          </div>\r\n          <h2 className=\"text-xl font-semibold mb-2\">Dive In & Explore</h2>\r\n          <p className=\"text-sm mb-2 text-gray-300\">\r\n            Craving buttery scallops, sushi-grade tuna, or wild-caught salmon?\r\n            We’ve got the best, chef-quality seafood ready for your table!\r\n          </p>\r\n          <p className=\"text-sm mb-4 font-medium text-white\">\r\n            Pro Tip: Not sure what to try first?\r\n          </p>\r\n          <button className=\"px-4 py-2 bg-white border border-gray-300 text-gray-600 rounded hover:bg-gray-100 transition\">\r\n            OUR BEST SELLERS\r\n          </button>\r\n        </div>\r\n\r\n        <div className=\"max-w-sm  rounded-xl p-6 m-4 shadow-lg\">\r\n          <div className=\"w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow \">\r\n            <img\r\n              src=\"/images/pass.png\"\r\n              alt=\"Seafood Icon\"\r\n              className=\"w-12 h-12 hover-updown\"\r\n            />\r\n          </div>\r\n          <h2 className=\"text-xl font-semibold mb-2\">Make Your Catch</h2>\r\n          <p className=\"text-sm mb-2 text-gray-300\">\r\n            Love fresh seafood? Set it and forget it! Subscribe for savings, VIP\r\n            perks, and exclusive gifts—no effort required!\r\n          </p>\r\n          <p className=\"text-sm mb-4 font-medium text-white\">\r\n            Save 15% or more on every order!\r\n          </p>\r\n          <button className=\"px-4 py-2 bg-white border border-gray-300 text-gray-600 rounded hover:bg-gray-100 transition\">\r\n            SUBSCRIBE & SAVE\r\n          </button>\r\n        </div>\r\n\r\n        <div className=\"max-w-sm  rounded-xl p-6 m-4 shadow-lg\">\r\n          <div className=\"w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow \">\r\n            <img\r\n              src=\"/images/puss.png\"\r\n              alt=\"Seafood Icon\"\r\n              className=\"w-12 h-12 hover-updown\"\r\n            />\r\n          </div>\r\n          <h2 className=\"text-xl font-semibold mb-2\">Reel It In</h2>\r\n          <p className=\"text-sm mb-2 text-gray-300\">\r\n            Our seafood ships fast, freshly-frozen, and packed with care in\r\n            eco-friendly materials. No more guessing how long that store-bought\r\n            fish has been hanging around!\r\n          </p>\r\n          <p className=\"text-sm mb-4 font-medium text-white\">\r\n            Worried about cooking? Don’t be!\r\n          </p>\r\n          <button className=\"px-4 py-2 bg-white border border-gray-300 text-gray-600 rounded hover:bg-gray-100 transition\">\r\n            TIPS & RECIPES\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

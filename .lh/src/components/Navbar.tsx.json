@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Navbar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1750771264511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750771271510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n \r\n-ex\n\\ No newline at end of file\n+export default function Navbar() {\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750772676874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,27 @@\n \r\n-export default function Navbar() {\n\\ No newline at end of file\n+export default function Navbar() {\r\n+  return (\r\n+    <nav className=\"bg-white border-gray-200 dark:bg-gray-900\">\r\n+      <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4\">\r\n+        <a href=\"/\" className=\"flex items-center\">\r\n+          <img\r\n+            src=\"@/\"\r\n+            className=\"h-8 mr-3\"\r\n+            alt=\"Seafood Shop Logo\"\r\n+          />\r\n+          <span className=\"self-center text-2xl font-semibold whitespace-nowrap dark:text-white\">\r\n+            Seafood Shop\r\n+          </span>\r\n+        </a>\r\n+        <div className=\"flex md:order-2\">\r\n+          <button\r\n+            type=\"button\"\r\n+            className=\"text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-700\"\r\n+          >\r\n+            Cart\r\n+          </button>\r\n+        </div>\r\n+      </div>\r\n+    </nav>\r\n+  );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750772682488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <nav className=\"bg-white border-gray-200 dark:bg-gray-900\">\r\n       <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4\">\r\n         <a href=\"/\" className=\"flex items-center\">\r\n           <img\r\n-            src=\"@/\"\r\n+            src=\"../\"\r\n             className=\"h-8 mr-3\"\r\n             alt=\"Seafood Shop Logo\"\r\n           />\r\n           <span className=\"self-center text-2xl font-semibold whitespace-nowrap dark:text-white\">\r\n"
+                },
+                {
+                    "date": 1750772828880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <nav className=\"bg-white border-gray-200 dark:bg-gray-900\">\r\n       <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4\">\r\n         <a href=\"/\" className=\"flex items-center\">\r\n           <img\r\n-            src=\"../../public\"\r\n+            src=\"../../public/\"\r\n             className=\"h-8 mr-3\"\r\n             alt=\"Seafood Shop Logo\"\r\n           />\r\n           <span className=\"self-center text-2xl font-semibold whitespace-nowrap dark:text-white\">\r\n"
+                },
+                {
+                    "date": 1750773623036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <div className=\"flex md:order-2\">\r\n             <Link href=\"/\">Home</Link>\r\n             <Link href=\"/\">About</Link>\r\n             <Link href=\"/\">Foods</Link>\r\n-            <Link href=\"/\"><button className=\"\">Sign Up</button></Link>\r\n+            <Link href=\"/\"><button className=\"btn\">Sign Up</button></Link>\r\n             <Link href=\"/\">Sign In</Link>\r\n         </div>\r\n       </div>\r\n     </nav>\r\n"
+                }
+            ],
+            "date": 1750771264511,
+            "name": "Commit-0",
+            "content": "\r\nex"
+        }
+    ]
+}

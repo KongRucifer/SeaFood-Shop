@@ -1,0 +1,146 @@
+{
+    "sourceFile": "src/app/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 32,
+            "patches": [
+                {
+                    "date": 1750749777767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750749854039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,16 +13,22 @@\n });\n \n export const metadata: Metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ...\",\n+  keywords: \"ອາຫານທະເລ, ອອນໄລນ໌, ສັ່ງອາຫານ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000/images/seafood.jpg\"],\n+    description: \"ສັ່ງອາຫານທະເລລາຄາຖືກ ສົ່ງໄວ ມີບໍລິການໂອນເງິນ ປາຍທາງ\",\n+    images: [\n+      {\n+        url: \"http://localhost:3000/images/seafood.jpg\",\n+        width: 1200,\n+        height: 630,\n+      },\n+    ],\n   },\n-  canonical: \"http://localhost:3000/images/fish.jpeg\",\n+  canonical: \"http://localhost:3000/\",\n };\n \n export default function RootLayout({\n   children,\n"
+                },
+                {
+                    "date": 1750751239121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,25 +11,25 @@\n   variable: \"--font-geist-mono\",\n   subsets: [\"latin\"],\n });\n \n-export const metadata: Metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ...\",\n-  keywords: \"ອາຫານທະເລ, ອອນໄລນ໌, ສັ່ງອາຫານ\",\n-  openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງອາຫານທະເລລາຄາຖືກ ສົ່ງໄວ ມີບໍລິການໂອນເງິນ ປາຍທາງ\",\n-    images: [\n-      {\n-        url: \"http://localhost:3000/images/seafood.jpg\",\n-        width: 1200,\n-        height: 630,\n-      },\n-    ],\n-  },\n-  canonical: \"http://localhost:3000/\",\n-};\n+// export const metadata: Metadata = {\n+//   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ...\",\n+//   keywords: \"ອາຫານທະເລ, ອອນໄລນ໌, ສັ່ງອາຫານ\",\n+//   openGraph: {\n+//     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+//     description: \"ສັ່ງອາຫານທະເລລາຄາຖືກ ສົ່ງໄວ ມີບໍລິການໂອນເງິນ ປາຍທາງ\",\n+//     images: [\n+//       {\n+//         url: \"http://localhost:3000/images/seafood.jpg\",\n+//         width: 1200,\n+//         height: 630,\n+//       },\n+//     ],\n+//   },\n+//   canonical: \"http://localhost:3000/\",\n+// };\n \n export default function RootLayout({\n   children,\n }: Readonly<{\n"
+                },
+                {
+                    "date": 1750751250736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n-\n+import \n const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n@@ -12,23 +12,8 @@\n   subsets: [\"latin\"],\n });\n \n // export const metadata: Metadata = {\n-//   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ...\",\n-//   keywords: \"ອາຫານທະເລ, ອອນໄລນ໌, ສັ່ງອາຫານ\",\n-//   openGraph: {\n-//     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-//     description: \"ສັ່ງອາຫານທະເລລາຄາຖືກ ສົ່ງໄວ ມີບໍລິການໂອນເງິນ ປາຍທາງ\",\n-//     images: [\n-//       {\n-//         url: \"http://localhost:3000/images/seafood.jpg\",\n-//         width: 1200,\n-//         height: 630,\n-//       },\n-//     ],\n-//   },\n-//   canonical: \"http://localhost:3000/\",\n // };\n \n export default function RootLayout({\n   children,\n"
+                },
+                {
+                    "date": 1750751389183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n   variable: \"--font-geist-mono\",\n   subsets: [\"latin\"],\n });\n \n-// export const metadata: Metadata = {\n-// };\n+export const metadata: Metadata = {\n+};\n \n export default function RootLayout({\n   children,\n }: Readonly<{\n"
+                },
+                {
+                    "date": 1750751534032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,47 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-};\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+  description:\n+    \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n+  keywords:\n+    \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n+  authors: [{ name: \"Your Name or Company\" }],\n+  publisher: \"Your Company\",\n+  robots: {\n+    index: true,\n+    follow: true,\n+  },\n+  openGraph: {\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+    description:\n+      \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n+    url: \"http://localhost:3000/\",\n+    siteName: \"BeautyShop\",\n+    locale: \"th_TH\",\n+    type: \"website\",\n+    images: [\n+      {\n+        url: \"http://localhost:3000/images/seafood.jpg\",\n+        width: 1200,\n+        height: 630,\n+        alt: \"Food Shop Image\",\n+      },\n+    ],\n+  },\n+  twitter: {\n+    card: \"summary_large_image\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+    description:\n+      \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n+    images: [\"http://localhost:3000/images/seafood2.jpeg\"],\n+  },\n+  alternates: {\n+    canonical: \"https://yourdomain.com/\",\n+  },\n+}\n \n export default function RootLayout({\n   children,\n }: Readonly<{\n"
+                },
+                {
+                    "date": 1750751547388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n import \n-const geistSans = Geist({\n+ const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n \n"
+                },
+                {
+                    "date": 1750751581495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n-import \n+\n  const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n@@ -12,9 +12,9 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+  title: \"Kຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n"
+                },
+                {
+                    "date": 1750751589989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-  title: \"Kຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n"
+                },
+                {
+                    "date": 1750751603940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  authors: [{ name: \"Your Name or Company\" }],\n+  authors: [{ name: \"SU\" }],\n   publisher: \"Your Company\",\n   robots: {\n     index: true,\n     follow: true,\n"
+                },
+                {
+                    "date": 1750751611680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  authors: [{ name: \"SU\" }],\n+  authors: [{ name: \"SuperMa\" }],\n   publisher: \"Your Company\",\n   robots: {\n     index: true,\n     follow: true,\n"
+                },
+                {
+                    "date": 1750751619559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  authors: [{ name: \"SuperMa\" }],\n+  authors: [{ name: \"Super Shop \" }],\n   publisher: \"Your Company\",\n   robots: {\n     index: true,\n     follow: true,\n"
+                },
+                {
+                    "date": 1750751644064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  authors: [{ name: \"Super Shop \" }],\n+  authors: [{ name: \"Your Name or Company\" }],\n   publisher: \"Your Company\",\n   robots: {\n     index: true,\n     follow: true,\n"
+                },
+                {
+                    "date": 1750751652602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  authors: [{ name: \"Your Name or Company\" }],\n+  authors: [{ name: \"kong mong thao\" }],\n   publisher: \"Your Company\",\n   robots: {\n     index: true,\n     follow: true,\n"
+                },
+                {
+                    "date": 1750751670399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   authors: [{ name: \"kong mong thao\" }],\n-  publisher: \"Your Company\",\n+  publisher: \"Super Shop SeaFood\",\n   robots: {\n     index: true,\n     follow: true,\n   },\n@@ -28,9 +28,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     url: \"http://localhost:3000/\",\n-    siteName: \"BeautyShop\",\n+    siteName: \"Sea\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n       {\n"
+                },
+                {
+                    "date": 1750751678393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     url: \"http://localhost:3000/\",\n-    siteName: \"Sea\",\n+    siteName: \"SeaFood Shop\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n       {\n"
+                },
+                {
+                    "date": 1750751694252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Se\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n@@ -24,13 +24,13 @@\n     index: true,\n     follow: true,\n   },\n   openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Se\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     url: \"http://localhost:3000/\",\n-    siteName: \"SeaFood Shop\",\n+    siteName: \"Seafood Shop\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n       {\n"
+                },
+                {
+                    "date": 1750751699396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Se\",\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop,\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n@@ -24,9 +24,9 @@\n     index: true,\n     follow: true,\n   },\n   openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Se\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",,\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     url: \"http://localhost:3000/\",\n     siteName: \"Seafood Shop\",\n"
+                },
+                {
+                    "date": 1750751711213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   subsets: [\"latin\"],\n });\n \n export const metadata: Metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop,\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n"
+                },
+                {
+                    "date": 1750751718508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     index: true,\n     follow: true,\n   },\n   openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",,\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     url: \"http://localhost:3000/\",\n     siteName: \"Seafood Shop\",\n@@ -42,9 +42,9 @@\n     ],\n   },\n   twitter: {\n     card: \"summary_large_image\",\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | S\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"http://localhost:3000/images/seafood2.jpeg\"],\n   },\n"
+                },
+                {
+                    "date": 1750751724247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     ],\n   },\n   twitter: {\n     card: \"summary_large_image\",\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | S\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"http://localhost:3000/images/seafood2.jpeg\"],\n   },\n"
+                },
+                {
+                    "date": 1750751767025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n export const metadata: Metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n   description:\n-    \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ, ຊີວິດ...\",\n+    \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ,  ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   authors: [{ name: \"kong mong thao\" }],\n   publisher: \"Super Shop SeaFood\",\n"
+                },
+                {
+                    "date": 1750751926448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n export const metadata: Metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n   description:\n-    \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ,  ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ\",\n+    \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ ແລະ ອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ\",\n   keywords:\n     \"ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   authors: [{ name: \"kong mong thao\" }],\n   publisher: \"Super Shop SeaFood\",\n@@ -33,9 +33,9 @@\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n       {\n-        url: \"http://localhost:3000/images/seafood.jpg\",\n+        url: \"http://localhost:3000/images/seafood_shop.jpg\",\n         width: 1200,\n         height: 630,\n         alt: \"Food Shop Image\",\n       },\n"
+                },
+                {
+                    "date": 1750752283125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n       {\n-        url: \"http://localhost:3000/images/seafood_shop.jpg\",\n+        url: \"http://localhost:3000/images/myshopSeafood.jpeg\",\n         width: 1200,\n         height: 630,\n         alt: \"Food Shop Image\",\n       },\n"
+                },
+                {
+                    "date": 1750752306981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n     card: \"summary_large_image\",\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000/images/seafood2.jpeg\"],\n+    images: [\"http://localhost:3000/images/myshopSeafood.jpeg\"],\n   },\n   alternates: {\n     canonical: \"https://yourdomain.com/\",\n   },\n"
+                },
+                {
+                    "date": 1750752313463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n     card: \"summary_large_image\",\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000/images/myshopSeafood.jpeg\"],\n+    images: [\"http://localhost:3000/images/seafood2.jpeg\"],\n   },\n   alternates: {\n     canonical: \"https://yourdomain.com/\",\n   },\n"
+                },
+                {
+                    "date": 1750754664193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    url: \"http://localhost:3000/\",\n+    url: \"http://localhost:3000/images/myshopSeafood.jpeg\",\n     siteName: \"Seafood Shop\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n"
+                },
+                {
+                    "date": 1750754671191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    url: \"http://localhost:3000/images/myshopSeafood.jpeg\",\n+    url: \"http://localhost:3000/images/f.jpeg\",\n     siteName: \"Seafood Shop\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n"
+                },
+                {
+                    "date": 1750755031669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n     description:\n       \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    url: \"http://localhost:3000/images/f.jpeg\",\n+    url: \"http://localhost:3000/images/fish.jpeg\",\n     siteName: \"Seafood Shop\",\n     locale: \"th_TH\",\n     type: \"website\",\n     images: [\n@@ -50,8 +50,9 @@\n   },\n   alternates: {\n     canonical: \"https://yourdomain.com/\",\n   },\n+  viewport: 'width=device-width, initial-scale=1',\n }\n \n export default function RootLayout({\n   children,\n"
+                },
+                {
+                    "date": 1750769536194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   variable: \"--font-geist-mono\",\n   subsets: [\"latin\"],\n });\n \n-export const metadata: Metadata = {\n+export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ ແລະ ອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ\",\n   keywords:\n"
+                },
+                {
+                    "date": 1750769571223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   variable: \"--font-geist-mono\",\n   subsets: [\"latin\"],\n });\n \n-export const metadata = {\n+export const metadata: Metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop\",\n   description:\n     \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ປາ, ປູ, ກຸ້ງ ແລະ ອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ\",\n   keywords:\n"
+                },
+                {
+                    "date": 1750771458141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n-\n+import \n  const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n"
+                },
+                {
+                    "date": 1750771466780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n import Navbar from \"@/components/Navbar\";\n-import \n+import Footer from \"@/components/Footer\";\n  const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n"
+                }
+            ],
+            "date": 1750749777767,
+            "name": "Commit-0",
+            "content": "import type { Metadata } from \"next\";\nimport { Geist, Geist_Mono } from \"next/font/google\";\nimport \"./globals.css\";\n\nconst geistSans = Geist({\n  variable: \"--font-geist-sans\",\n  subsets: [\"latin\"],\n});\n\nconst geistMono = Geist_Mono({\n  variable: \"--font-geist-mono\",\n  subsets: [\"latin\"],\n});\n\nexport const metadata: Metadata = {\n  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n  openGraph: {\n    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n    images: [\"http://localhost:3000/images/seafood.jpg\"],\n  },\n  canonical: \"http://localhost:3000/images/fish.jpeg\",\n};\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\">\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        {children}\n      </body>\n    </html>\n  );\n}\n"
+        }
+    ]
+}

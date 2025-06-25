@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/app/modules/home/components/contents/content1.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1750778525538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750778534348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-e\n\\ No newline at end of file\n+export def\\\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778539392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,7 @@\n-export def\\\n\\ No newline at end of file\n+export default function Page() {\r\n+  return (\r\n+    <div className=\"flex items-center justify-center h-screen\">\r\n+      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+    </div>\r\n+  );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778577038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center h-screen\">\r\n+    <div className=\"flex items-center justify-center h-screen bg-\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778583188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center h-screen bg-\">\r\n+    <div className=\"flex items-center justify-center h-screen bg-red-50\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778647109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function Page() {\r\n+export default function Content() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen bg-red-50\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1750779081762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-export default function Content() {\r\n+export default function Content1() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center h-screen bg-red-50\">\r\n+    <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779089581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4\">\r\n+    <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto b p-4\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779112277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"max-w-screen-xl flex flex-wrap items-center justify-between mx-auto b p-4\">\r\n+    <div className=\"\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779118728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"\">\r\n+    <div className=\"                         \">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779125258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"                         \">\r\n+    <div className=\"                       \">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779137178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"                       \">\r\n+    <div className=\" container\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779145535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container\">\r\n+    <div className=\" container br\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779247002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container br\">\r\n+    <div className=\"  border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779257933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\"  border\">\r\n+    <div className=\" container border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779345646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container border\">\r\n+    <div className=\" container  border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779351773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container  border\">\r\n+    <div className=\" container m- border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779363369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container m- border\">\r\n+    <div className=\" container mx-auto border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779373867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container mx-auto border\">\r\n+    <div className=\" container  border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779391245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container  border\">\r\n+    <div className=\" container h- border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779411974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container h- border\">\r\n+    <div className=\" container h-100 border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779420902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container h-100 border\">\r\n+    <div className=\" container h-0 border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779440254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Content1() {\r\n   return (\r\n-    <div className=\" container h-0 border\">\r\n+    <div className=\" container h-90 border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779465951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export default function Content1() {\r\n   return (\r\n     <div className=\" container h-90 border\">\r\n+        \r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779833219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Content1() {\r\n   return (\r\n     <div className=\" container h-90 border\">\r\n-        \r\n+        <img src=\"/\" alt=\"\" />\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779839604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Content1() {\r\n   return (\r\n     <div className=\" container h-90 border\">\r\n-        <img src=\"/\" alt=\"\" />\r\n+        <img src=\"/images/\" alt=\"\" />\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750779849147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Content1() {\r\n   return (\r\n     <div className=\" container h-90 border\">\r\n-        <img src=\"/images/f\" alt=\"\" />\r\n+        <img src=\"/images/fo\" alt=\"\" />\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1750778525538,
+            "name": "Commit-0",
+            "content": "e"
+        }
+    ]
+}

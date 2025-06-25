@@ -1,0 +1,542 @@
+{
+    "sourceFile": "src/app/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 131,
+            "patches": [
+                {
+                    "date": 1750743167127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750743263595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,21 @@\n // pages/index.tsx\n import React from 'react'\n+// pages/index.tsx\n+export async function getServerSideProps() {\n+  const res = await fetch('https://api.example.com/posts')\n+  const posts = await res.json()\n \n-type Props = {\n-  posts: { id: number; title: string }[]\n+  return { props: { posts } }\n }\n \n-export default function Home({ posts }: Props) {\n+export default function Home({ posts }) {\n   return (\n     <div>\n-      <h1>บทความจาก SSR</h1>\n-      <ul>\n-        {posts.map((post) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n+      <h1>Blog</h1>\n+      {posts.map((p) => (\n+        <p key={p.id}>{p.title}</p>\n+      ))}\n     </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1750743268625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,14 +18,4 @@\n     </div>\n   )\n }\n \n-export async function getServerSideProps() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  const posts = await res.json()\n-\n-  return {\n-    props: {\n-      posts,\n-    },\n-  }\n-}\n"
+                },
+                {
+                    "date": 1750743274376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,4 +18,14 @@\n     </div>\n   )\n }\n \n+export async function getServerSideProps() {\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const posts = await res.json()\n+\n+  return {\n+    props: {\n+      posts,\n+    },\n+  }\n+}\n"
+                },
+                {
+                    "date": 1750743283210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // pages/index.tsx\n import React from 'react'\n // pages/index.tsx\n export async function getServerSideProps() {\n-  const res = await fetch('https://api.example.com/posts')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n   return { props: { posts } }\n }\n"
+                },
+                {
+                    "date": 1750743364227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n   return { props: { posts } }\n }\n \n-export default function Home({ posts }) {\n+export default function Home({ props }) {\n   return (\n     <div>\n       <h1>Blog</h1>\n       {posts.map((p) => (\n@@ -17,15 +17,4 @@\n       ))}\n     </div>\n   )\n }\n-\n-export async function getServerSideProps() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  const posts = await res.json()\n-\n-  return {\n-    props: {\n-      posts,\n-    },\n-  }\n-}\n"
+                },
+                {
+                    "date": 1750743373738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export default function Home({ props }) {\n   return (\n     <div>\n       <h1>Blog</h1>\n-      {posts.map((p) => (\n+      {props.map((p) => (\n         <p key={p.id}>{p.title}</p>\n       ))}\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1750743399790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n   return { props: { posts } }\n }\n \n-export default function Home({ props }) {\n+export default function Home({ posts }: Props) {\n   return (\n     <div>\n       <h1>Blog</h1>\n       {props.map((p) => (\n"
+                },
+                {
+                    "date": 1750743436681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export default function Home({ posts }: Props) {\n   return (\n     <div>\n       <h1>Blog</h1>\n-      {props.map((p) => (\n+      {posts.map((p) => (\n         <p key={p.id}>{p.title}</p>\n       ))}\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1750743465412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n export default function Home({ posts }: Props) {\n   return (\n     <div>\n       <h1>Blog</h1>\n-      {posts.map((p) => (\n+      {posts.map((p :any) => (\n         <p key={p.id}>{p.title}</p>\n       ))}\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1750743581340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,18 @@\n-// pages/index.tsx\n+// ✅ app/page.tsx\n import React from 'react'\n-// pages/index.tsx\n-export async function getServerSideProps() {\n+\n+export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n-  return { props: { posts } }\n-}\n-\n-export default function Home({ posts }: Props) {\n   return (\n     <div>\n-      <h1>Blog</h1>\n-      {posts.map((p :any) => (\n-        <p key={p.id}>{p.title}</p>\n-      ))}\n+      <h1>Posts</h1>\n+      <ul>\n+        {posts.map((post: any) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1750743601702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=4')\n   const posts = await res.json()\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1750743615745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=4')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=1')\n   const posts = await res.json()\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1750743624991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=1')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=')\n   const posts = await res.json()\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1750743955636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n-// ✅ app/page.tsx\n-import React from 'react'\n+// // ✅ app/page.tsx\n+// import React from 'react'\n \n-export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=')\n-  const posts = await res.json()\n+// export default async function Home() {\n+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+//   const posts = await res.json()\n \n-  return (\n-    <div>\n-      <h1>Posts</h1>\n-      <ul>\n-        {posts.map((post: any) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n-    </div>\n-  )\n-}\n+//   return (\n+//     <div>\n+//       <h1>Posts</h1>\n+//       <ul>\n+//         {posts.map((post: any) => (\n+//           <li key={post.id}>{post.title}</li>\n+//         ))}\n+//       </ul>\n+//     </div>\n+//   )\n+// }\n"
+                },
+                {
+                    "date": 1750744030702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,4 +15,34 @@\n //       </ul>\n //     </div>\n //   )\n // }\n+// app/page.tsx\n+'use client'\n+\n+import React, { useEffect, useState } from 'react'\n+\n+export default function Home() {\n+  const [posts, setPosts] = useState<any[]>([])\n+\n+  useEffect(() => {\n+    async function fetchPosts() {\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+      const data = await res.json()\n+      setPosts(data)\n+    }\n+\n+    fetchPosts()\n+  }, [])\n+\n+  return (\n+    <div>\n+      <h1>Posts (CSR)</h1>\n+      <ul>\n+        {posts.map((post) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n+    </div>\n+  )\n+}\n+\n"
+                },
+                {
+                    "date": 1750744073105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }, [])\n \n   return (\n     <div>\n-      <h1>Posts (CSR)</h1>\n+      <h1>Posts f (CSR)</h1>\n       <ul>\n         {posts.map((post) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750744078196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }, [])\n \n   return (\n     <div>\n-      <h1>Posts f (CSR)</h1>\n+      <h1>Posts f f(CSR)</h1>\n       <ul>\n         {posts.map((post) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750744091787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   const [posts, setPosts] = useState<any[]>([])\n \n   useEffect(() => {\n     async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=9')\n       const data = await res.json()\n       setPosts(data)\n     }\n \n@@ -35,9 +35,9 @@\n   }, [])\n \n   return (\n     <div>\n-      <h1>Posts f f(CSR)</h1>\n+      <h1>Posts (CSR)</h1>\n       <ul>\n         {posts.map((post) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750744112697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   const [posts, setPosts] = useState<any[]>([])\n \n   useEffect(() => {\n     async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=9')\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=')\n       const data = await res.json()\n       setPosts(data)\n     }\n \n"
+                },
+                {
+                    "date": 1750744118888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   const [posts, setPosts] = useState<any[]>([])\n \n   useEffect(() => {\n     async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=')\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n       const data = await res.json()\n       setPosts(data)\n     }\n \n"
+                },
+                {
+                    "date": 1750744154551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,33 +16,33 @@\n //     </div>\n //   )\n // }\n // app/page.tsx\n-'use client'\n+// 'use client'\n \n-import React, { useEffect, useState } from 'react'\n+// import React, { useEffect, useState } from 'react'\n \n-export default function Home() {\n-  const [posts, setPosts] = useState<any[]>([])\n+// export default function Home() {\n+//   const [posts, setPosts] = useState<any[]>([])\n \n-  useEffect(() => {\n-    async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n-      const data = await res.json()\n-      setPosts(data)\n-    }\n+//   useEffect(() => {\n+//     async function fetchPosts() {\n+//       const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n+//       const data = await res.json()\n+//       setPosts(data)\n+//     }\n \n-    fetchPosts()\n-  }, [])\n+//     fetchPosts()\n+//   }, [])\n \n-  return (\n-    <div>\n-      <h1>Posts (CSR)</h1>\n-      <ul>\n-        {posts.map((post) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n-    </div>\n-  )\n-}\n+//   return (\n+//     <div>\n+//       <h1>Posts (CSR)</h1>\n+//       <ul>\n+//         {posts.map((post) => (\n+//           <li key={post.id}>{post.title}</li>\n+//         ))}\n+//       </ul>\n+//     </div>\n+//   )\n+// }\n \n"
+                },
+                {
+                    "date": 1750744162701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n-// // ✅ app/page.tsx\n-// import React from 'react'\n+// ✅ app/page.tsx\n+import React from 'react'\n \n-// export default async function Home() {\n-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-//   const posts = await res.json()\n+export default async function Home() {\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const posts = await res.json()\n \n-//   return (\n-//     <div>\n-//       <h1>Posts</h1>\n-//       <ul>\n-//         {posts.map((post: any) => (\n-//           <li key={post.id}>{post.title}</li>\n-//         ))}\n-//       </ul>\n-//     </div>\n-//   )\n-// }\n+  return (\n+    <div>\n+      <h1>Posts</h1>\n+      <ul>\n+        {posts.map((post: any) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n+    </div>\n+  )\n+}\n // app/page.tsx\n // 'use client'\n \n // import React, { useEffect, useState } from 'react'\n"
+                },
+                {
+                    "date": 1750744168351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=55')\n   const posts = await res.json()\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1750744173801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=55')\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1750747183797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,18 @@\n // ✅ app/page.tsx\n import React from 'react'\n-\n+// app/page.tsx\n+export const metadata = {\n+  title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n+  description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n+  openGraph: {\n+    title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n+    description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    images: [\"https://yourdomain.com/og-image.jpg\"],\n+  },\n+  canonical: \"https://yourdomain.com/\",\n+};\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n"
+                },
+                {
+                    "date": 1750747351621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n-  title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n+  title: \"ຮ - หน้าแรก | BeautyShop\",\n   description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n"
+                },
+                {
+                    "date": 1750747358203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n-  title: \"ຮ - หน้าแรก | BeautyShop\",\n+  title: \"ຮ້ານຂາຍເຄື່ອງ - หน้าแรก | BeautyShop\",\n   description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n"
+                },
+                {
+                    "date": 1750747371543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n-  title: \"ຮ້ານຂາຍເຄື່ອງ - หน้าแรก | BeautyShop\",\n+  title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | BeautyShop\",\n   description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n"
+                },
+                {
+                    "date": 1750747387191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | BeautyShop\",\n+  title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n"
+                },
+                {
+                    "date": 1750747405841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ร้านขายเครื่องสำอางออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍຫາออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747414092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍຫາออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747419467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລออนไลน์ หน้าแรก รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ  รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747425895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ  รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747437037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ รวมสินค้าหลากหลาย เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານ เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747444733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານ เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747452695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ เช่น ครีมบำรุงผิว ลิปสติก รองพื้น\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747467063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ\",\n+  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747495567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານ - ໜ້າທຳອິດ | FoodShop\",\n+  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n"
+                },
+                {
+                    "date": 1750747502085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລ ອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747511136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລ ອອນໄລ ໜ້າທຳອິດ ລວມອາຫານຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747525152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ ອາຫານ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747531918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, \",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747538325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, \",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747548228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747553697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747585104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ ຫາ ບໍ່ ແນ່ນໍາ\",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747590313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ ຫາ ບໍ່ ແນ່ນໍາ\",\n+  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n"
+                },
+                {
+                    "date": 1750747621531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \"เครื่องสำอาง, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n+  keywords: \", ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747652360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \", ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n+  keywords: \" ອແ, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747668452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອແ, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n+  keywords: \" ອາຫານທະເເລ, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747680206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເເລ, ครีมบำรุงผิว, ลิปสติก, รองพื้น\",\n+  keywords: \" ອາຫານທະເລ, , ลิปสติก, รองพื้น\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747709967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ, , ลิปสติก, รองพื้น\",\n+  keywords: \" ອາຫານທະເລ\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747726708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ\",\n+  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລ ສົ່ງໄວ, ອາຫານ ການໂອນເງິນ\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747745672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລ ສົ່ງໄວ, ອາຫານ ການໂອນເງິນ\",\n+  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລ ສົ່ງໄວ\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747753048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // app/page.tsx\n export const metadata = {\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລ ສົ່ງໄວ\",\n+  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n"
+                },
+                {
+                    "date": 1750747770716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n-    title: \"ร้านขายเครื่องสำอาง - หน้าแรก | BeautyShop\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop - หน้าแรก | BeautyShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n"
+                },
+                {
+                    "date": 1750747776220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop - หน้าแรก | BeautyShop\",\n+    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n"
+                },
+                {
+                    "date": 1750747800391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ซื้อเครื่องสำอางออนไลน์คุณภาพดี ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    description: \"ຊື້ອາຫານທະເລ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747807117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ຊື້ອາຫານທະເລ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ  ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747814659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ  ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747821293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747830436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ราคาถูก ส่งไว มีบริการเก็บเงินปลายทาง\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີ\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747842225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີ\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການ\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747849962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການ\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນ\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747858516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນ\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍ\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750747879435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍ\",\n+    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/og-image.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n"
+                },
+                {
+                    "date": 1750748353533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/og-image.jpg\"],\n+    images: [\"https://yourdomain.com/\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750748360686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/\"],\n+    images: [\"https://yourdomain.com/images/\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750748371391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/images/\"],\n+    images: [\"https://yourdomain.com/images/seafood.jpg\"],\n   },\n   canonical: \"https://yourdomain.com/\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750748623878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/images/seafood.jpg\"],\n+    images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/\",\n+ c:\\Users\\PC\\Pictures\\picture when download\\fish.jpeg\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748640056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n   },\n- c:\\Users\\PC\\Pictures\\picture when download\\fish.jpeg\n+  canonical: \"https://yourdomain.com/image/\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748645300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/image/\",\n+  canonical: \"https://yourdomain.com/image/fi\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748652152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/image/fi\",\n+  canonical: \"https://yourdomain.com/image/fish.j\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748679376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n+    images: [\"https://yourdomain.com/pubimages/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/image/fish.j\",\n+  canonical: \"https://yourdomain.com/image/fish.jpeg\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748684835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/pubimages/seafood.jpeg\"],\n+    images: [\"https://yourdomain.com/public/images/seafood.jpeg\"],\n   },\n   canonical: \"https://yourdomain.com/image/fish.jpeg\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750748690301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/public/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/image/fish.jpeg\",\n+  canonical: \"https://yourdomain.com/public/image/fish.jpeg\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748776453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"https://yourdomain.com/public/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/public/image/fish.jpeg\",\n+  canonical: \"https://yourdomain.com/public/imagesfish.jpeg\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750748785768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/public/images/seafood.jpeg\"],\n+    images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/public/imagesfish.jpeg\",\n+  canonical: \"https://yourdomain.com/images/fish.jpeg\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750749094285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://yourdomain.com/images/seafood.jpeg\"],\n+    images: [\"https://images/seafooyourdomain.com/d.jpeg\"],\n   },\n   canonical: \"https://yourdomain.com/images/fish.jpeg\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750749123409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"https://images/seafooyourdomain.com/d.jpeg\"],\n+    images: [\"http://localhost:3000//images/seafood.jpeg\"],\n   },\n   canonical: \"https://yourdomain.com/images/fish.jpeg\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750749270605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000//images/seafood.jpeg\"],\n+    images: [\"http://localhost:3000/images/seafood.jpeg\"],\n   },\n-  canonical: \"https://yourdomain.com/images/fish.jpeg\",\n+  canonical: \"http://localhost:3000/images/fish.jpeg\",\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750749294526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n   openGraph: {\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000/images/seafood.jpeg\"],\n+    images: [\"http://localhost:3000/images/seafood.jpg\"],\n   },\n   canonical: \"http://localhost:3000/images/fish.jpeg\",\n };\n export default async function Home() {\n"
+                },
+                {
+                    "date": 1750749521416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n     images: [\"http://localhost:3000/images/seafood.jpg\"],\n   },\n-  canonical: \"http://localhost:3000/images/fish.jpeg\",\n+  <link rel=\"canonical\" href=\"https://yourdomain.com/yourpage\" />\n };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750751559714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n // ✅ app/page.tsx\n import React from 'react'\n // app/page.tsx\n-export const metadata = {\n-  title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-  description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-  keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-  openGraph: {\n-    title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-    description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-    images: [\"http://localhost:3000/images/seafood.jpg\"],\n-  },\n-  <link rel=\"canonical\" href=\"https://yourdomain.com/yourpage\" />\n-};\n+// export const metadata = {\n+//   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n+//   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n+//   openGraph: {\n+//     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n+//     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n+//     images: [\"http://localhost:3000/images/seafood.jpg\"],\n+//   },\n+//   canonical: \"http://localhost:3000/images/fish.jpeg\",\n+// };\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n"
+                },
+                {
+                    "date": 1750751756009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react'\n // app/page.tsx\n // export const metadata = {\n //   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ, ຊີວິດ, ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n+//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ,  ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n //   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n //   openGraph: {\n //     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n //     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n"
+                },
+                {
+                    "date": 1750752339920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-// app/page.tsx\n-// export const metadata = {\n-//   title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-//   description: \"ຮ້ານຂາຍອາຫານທະເລອອນໄລ ໜ້າທຳອິດ ລວມອາຫານທະເລຫຼາກຫຼາຍ ເຊັ່ນ  ປາ, ປູ, ກຸ້ງ,  ແລະອາຫານທະເລອື່ນໆ ສາມາດສັ່ງເຊົ້າ ແລະ ສັ່ງເຂົ້າໃນເວັບໄຊ ສາມາດເຮັດ ການໂອນເງິນ \",\n-//   keywords: \" ອາຫານທະເລ ອອນໄລ, ຮ້ານຂາຍອາຫານທະເລ, ສັ່ງອາຫານທະເລ, ອາຫານທະເລສົ່ງໄວ\",\n-//   openGraph: {\n-//     title: \"ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | FoodShop\",\n-//     description: \"ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ\",\n-//     images: [\"http://localhost:3000/images/seafood.jpg\"],\n-//   },\n-//   canonical: \"http://localhost:3000/images/fish.jpeg\",\n-// };\n+\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n"
+                },
+                {
+                    "date": 1750752348927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// ✅ app/page.tsx\n+\n import React from 'react'\n \n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n@@ -15,34 +15,4 @@\n       </ul>\n     </div>\n   )\n }\n-// app/page.tsx\n-// 'use client'\n-\n-// import React, { useEffect, useState } from 'react'\n-\n-// export default function Home() {\n-//   const [posts, setPosts] = useState<any[]>([])\n-\n-//   useEffect(() => {\n-//     async function fetchPosts() {\n-//       const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n-//       const data = await res.json()\n-//       setPosts(data)\n-//     }\n-\n-//     fetchPosts()\n-//   }, [])\n-\n-//   return (\n-//     <div>\n-//       <h1>Posts (CSR)</h1>\n-//       <ul>\n-//         {posts.map((post) => (\n-//           <li key={post.id}>{post.title}</li>\n-//         ))}\n-//       </ul>\n-//     </div>\n-//   )\n-// }\n-\n"
+                },
+                {
+                    "date": 1750752740476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const posts = await res.json()\n \n   return (\n     <div>\n-      <h1>Posts</h1>\n+      <h1>Postsf</h1>\n       <ul>\n         {posts.map((post: any) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750752767830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const posts = await res.json()\n \n   return (\n     <div>\n-      <h1>Postsf</h1>\n+      <h1>Postsfff</h1>\n       <ul>\n         {posts.map((post: any) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750752782820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,48 @@\n-\n+// ✅ app/page.tsx\n import React from 'react'\n \n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n   return (\n     <div>\n-      <h1>Postsfff</h1>\n+      <h1>Posts</h1>\n       <ul>\n         {posts.map((post: any) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n       </ul>\n     </div>\n   )\n }\n+// app/page.tsx\n+'use client'\n+\n+import React, { useEffect, useState } from 'react'\n+\n+export default function Home() {\n+  const [posts, setPosts] = useState<any[]>([])\n+\n+  useEffect(() => {\n+    async function fetchPosts() {\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n+      const data = await res.json()\n+      setPosts(data)\n+    }\n+\n+    fetchPosts()\n+  }, [])\n+\n+  return (\n+    <div>\n+      <h1>Posts (CSR)</h1>\n+      <ul>\n+        {posts.map((post) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n+    </div>\n+  )\n+}\n+\n"
+                },
+                {
+                    "date": 1750752794909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n // ✅ app/page.tsx\n-import React from 'react'\n+// import React from 'react'\n \n-export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  const posts = await res.json()\n+// export default async function Home() {\n+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+//   const posts = await res.json()\n \n-  return (\n-    <div>\n-      <h1>Posts</h1>\n-      <ul>\n-        {posts.map((post: any) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n-    </div>\n-  )\n-}\n+//   return (\n+//     <div>\n+//       <h1>Posts</h1>\n+//       <ul>\n+//         {posts.map((post: any) => (\n+//           <li key={post.id}>{post.title}</li>\n+//         ))}\n+//       </ul>\n+//     </div>\n+//   )\n+// }\n // app/page.tsx\n 'use client'\n \n import React, { useEffect, useState } from 'react'\n@@ -25,9 +25,9 @@\n   const [posts, setPosts] = useState<any[]>([])\n \n   useEffect(() => {\n     async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=99')\n+      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=9')\n       const data = await res.json()\n       setPosts(data)\n     }\n \n"
+                },
+                {
+                    "date": 1750752802220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }, [])\n \n   return (\n     <div>\n-      <h1>Posts (CSR)</h1>\n+      <h1>Posts h(CSR)</h1>\n       <ul>\n         {posts.map((post) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750752807402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   }, [])\n \n   return (\n     <div>\n-      <h1>Posts h(CSR)</h1>\n+      <h1>Posts(CSR)</h1>\n       <ul>\n         {posts.map((post) => (\n           <li key={post.id}>{post.title}</li>\n         ))}\n"
+                },
+                {
+                    "date": 1750752822672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,33 +16,5 @@\n //     </div>\n //   )\n // }\n // app/page.tsx\n-'use client'\n \n-import React, { useEffect, useState } from 'react'\n-\n-export default function Home() {\n-  const [posts, setPosts] = useState<any[]>([])\n-\n-  useEffect(() => {\n-    async function fetchPosts() {\n-      const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=9')\n-      const data = await res.json()\n-      setPosts(data)\n-    }\n-\n-    fetchPosts()\n-  }, [])\n-\n-  return (\n-    <div>\n-      <h1>Posts(CSR)</h1>\n-      <ul>\n-        {posts.map((post) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n-    </div>\n-  )\n-}\n-\n"
+                },
+                {
+                    "date": 1750752831380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,6 @@\n //       </ul>\n //     </div>\n //   )\n // }\n-// app/page.tsx\n \n+\n"
+                },
+                {
+                    "date": 1750761361143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,20 @@\n // ✅ app/page.tsx\n-// import React from 'react'\n+import React from 'react'\n+import Home from './views/Home'\n+export default async function Home() {\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const posts = await res.json()\n \n-// export default async function Home() {\n-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-//   const posts = await res.json()\n+  return (\n+    <div>\n+      <h1>Posts</h1>\n+      <ul>\n+        {posts.map((post: any) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n+    </div>\n+  )\n+}\n \n-//   return (\n-//     <div>\n-//       <h1>Posts</h1>\n-//       <ul>\n-//         {posts.map((post: any) => (\n-//           <li key={post.id}>{post.title}</li>\n-//         ))}\n-//       </ul>\n-//     </div>\n-//   )\n-// }\n \n-\n"
+                },
+                {
+                    "date": 1750761380377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n // ✅ app/page.tsx\n import React from 'react'\n import Home from './views/Home'\n+\n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n"
+                },
+                {
+                    "date": 1750761392875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,21 @@\n       </ul>\n     </div>\n   )\n }\n+export default async function Home() {\n+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  const posts = await res.json()\n \n+  return (\n+    <div>\n+      <h1>Posts</h1>\n+      <ul>\n+        {posts.map((post: any) => (\n+          <li key={post.id}>{post.title}</li>\n+        ))}\n+      </ul>\n+    </div>\n+  )\n+}\n \n+\n"
+                },
+                {
+                    "date": 1750761403569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,21 +16,21 @@\n       </ul>\n     </div>\n   )\n }\n-export default async function Home() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  const posts = await res.json()\n+// export default async function Home() {\n+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+//   const posts = await res.json()\n \n-  return (\n-    <div>\n-      <h1>Posts</h1>\n-      <ul>\n-        {posts.map((post: any) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n-      </ul>\n-    </div>\n-  )\n-}\n+//   return (\n+//     <div>\n+//       <h1>Posts</h1>\n+//       <ul>\n+//         {posts.map((post: any) => (\n+//           <li key={post.id}>{post.title}</li>\n+//         ))}\n+//       </ul>\n+//     </div>\n+//   )\n+// }\n \n \n"
+                },
+                {
+                    "date": 1750761418055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import Home from './views/Home'\n+import Hocme from './views/Home'\n \n export default async function Home() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750761435821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n import Hocme from './views/Home'\n \n-export default async function Home() {\n+export default async function AdminPage() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n \n   return (\n"
+                },
+                {
+                    "date": 1750761441987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import Hocme from './views/Home'\n+import Home from './views/Home'\n \n export default async function AdminPage() {\n   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n   const posts = await res.json()\n"
+                },
+                {
+                    "date": 1750761450687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,9 @@\n   return (\n     <div>\n       <h1>Posts</h1>\n       <ul>\n-        {posts.map((post: any) => (\n-          <li key={post.id}>{post.title}</li>\n-        ))}\n+       \n       </ul>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1750761476469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,16 @@\n import React from 'react'\n import Home from './views/Home'\n \n export default async function AdminPage() {\n-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  const posts = await res.json()\n+  // const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n+  // const posts = await res.json()\n \n   return (\n     <div>\n       <h1>Posts</h1>\n       <ul>\n-       \n+         \n       </ul>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1750761538405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,9 @@\n   // const posts = await res.json()\n \n   return (\n     <div>\n-      <h1>Posts</h1>\n-      <ul>\n-         \n-      </ul>\n+      \n     </div>\n   )\n }\n // export default async function Home() {\n"
+                },
+                {
+                    "date": 1750761543809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   // const posts = await res.json()\n \n   return (\n     <div>\n-      \n+       <Home\n     </div>\n   )\n }\n // export default async function Home() {\n"
+                },
+                {
+                    "date": 1750761566138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   // const posts = await res.json()\n \n   return (\n     <div>\n-       <Home\n+       <Home/>\n     </div>\n   )\n }\n // export default async function Home() {\n"
+                },
+                {
+                    "date": 1750761574545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,8 @@\n import React from 'react'\n import Home from './views/Home'\n \n export default async function AdminPage() {\n-  // const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-  // const posts = await res.json()\n \n   return (\n     <div>\n        <Home/>\n"
+                },
+                {
+                    "date": 1750761600267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n import Home from './views/Home'\n \n-export default async function AdminPage() {\n+export default async function FPage() {\n \n   return (\n     <div>\n        <Home/>\n"
+                },
+                {
+                    "date": 1750769681019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import Home from './views/Home'\n+// import Home from './views/Home'\n \n-export default async function FPage() {\n+export default async function FoodPage() {\n \n   return (\n     <div>\n        <Home/>\n"
+                },
+                {
+                    "date": 1750769710193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n export default async function FoodPage() {\n \n   return (\n     <div>\n-       <Home/>\n+       {/* <Home/> */}\n+       hi\n     </div>\n   )\n }\n // export default async function Home() {\n"
+                },
+                {
+                    "date": 1750776052394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,21 +10,7 @@\n        hi\n     </div>\n   )\n }\n-// export default async function Home() {\n-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n-//   const posts = await res.json()\n \n-//   return (\n-//     <div>\n-//       <h1>Posts</h1>\n-//       <ul>\n-//         {posts.map((post: any) => (\n-//           <li key={post.id}>{post.title}</li>\n-//         ))}\n-//       </ul>\n-//     </div>\n-//   )\n-// }\n \n \n"
+                },
+                {
+                    "date": 1750781726723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-// import Home from './views/Home'\n+import \n \n export default async function FoodPage() {\n \n   return (\n"
+                },
+                {
+                    "date": 1750781742539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import \n+import Home from '@/app/modules/home/views/page'\n \n export default async function FoodPage() {\n \n   return (\n"
+                },
+                {
+                    "date": 1750781750036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export default async function FoodPage() {\n \n   return (\n     <div>\n-       {/* <Home/> */}\n+       <Home/>\n        hi\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1750782204498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n \n   return (\n     <div>\n        <Home/>\n-       hi\n     </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1750782236761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export default async function FoodPage() {\n \n   return (\n     <div>\n-       <Home/>\n+       \n     </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1750782254512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import Home from '@/app/modules/home/views/page'\n \n export default async function FoodPage() {\n \n   return (\n"
+                },
+                {
+                    "date": 1750782295154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,9 @@\n import React from 'react'\n \n export default async function FoodPage() {\n \n-  return (\n-    <div>\n-       \n-    </div>\n-  )\n+  return ()\n }\n \n \n \n"
+                },
+                {
+                    "date": 1750782304137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n import React from 'react'\n \n export default async function FoodPage() {\n \n-  return ()\n+  return (\n+    <div></div>\n+  )\n }\n \n \n \n"
+                },
+                {
+                    "date": 1750838303612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n export default async function FoodPage() {\n \n   return (\n-    <div></div>\n+     redirect('/modules/home/view')\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750838311475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // ✅ app/page.tsx\n import React from 'react'\n-\n+import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n      redirect('/modules/home/view')\n"
+                },
+                {
+                    "date": 1750838411266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n-     redirect('/modules/home/view')\n+     redirect('/modules/home/views')\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750838574956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n-     redirect('/modules/home/views')\n+     \n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750838609581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n-     \n+    import { redirect } from 'next/navigation'\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750838622055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n-    import { redirect } from 'next/navigation'\n+     redirect\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750839238997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { redirect } from 'next/navigation'\n export default async function FoodPage() {\n \n   return (\n-     redirect\n+    //  redirect('/modules/home/views')\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750848810270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n // ✅ app/page.tsx\n import React from 'react'\n import { redirect } from 'next/navigation'\n+export { default } from './home/page';\n export default async function FoodPage() {\n \n   return (\n     //  redirect('/modules/home/views')\n+    <div></div>\n   )\n }\n \n \n"
+                },
+                {
+                    "date": 1750848829085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n // ✅ app/page.tsx\n import React from 'react'\n-import { redirect } from 'next/navigation'\n+\n export { default } from './home/page';\n export default async function FoodPage() {\n \n   return (\n-    //  redirect('/modules/home/views')\n     <div></div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1750849050545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // ✅ app/page.tsx\n import React from 'react'\n \n-export { default } from './home/page';\n+\n export default async function FoodPage() {\n \n   return (\n     <div></div>\n"
+                },
+                {
+                    "date": 1750851464701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n export default async function FoodPage() {\n \n   return (\n-    <div></div>\n+    <div>hie</div>\n   )\n }\n \n \n"
+                }
+            ],
+            "date": 1750743167127,
+            "name": "Commit-0",
+            "content": "// pages/index.tsx\nimport React from 'react'\n\ntype Props = {\n  posts: { id: number; title: string }[]\n}\n\nexport default function Home({ posts }: Props) {\n  return (\n    <div>\n      <h1>บทความจาก SSR</h1>\n      <ul>\n        {posts.map((post) => (\n          <li key={post.id}>{post.title}</li>\n        ))}\n      </ul>\n    </div>\n  )\n}\n\nexport async function getServerSideProps() {\n  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')\n  const posts = await res.json()\n\n  return {\n    props: {\n      posts,\n    },\n  }\n}\n"
+        }
+    ]
+}

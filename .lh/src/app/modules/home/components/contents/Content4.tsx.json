@@ -1,0 +1,94 @@
+{
+    "sourceFile": "src/app/modules/home/components/contents/Content4.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1750833147008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750833154696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import Image  from 'next/image';\r\n-export default function Content1() {\r\n+export default function Content4() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n   <img \r\n-    src=\"/images/food.jpg\"\r\n+    src=\"/images/imga.jpg\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n   />\r\n   <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n"
+                },
+                {
+                    "date": 1750833160763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n export default function Content4() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n   <img \r\n-    src=\"/images/imga.jpg\"\r\n+    src=\"/images/image.jpg\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n   />\r\n   <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n"
+                },
+                {
+                    "date": 1750833170444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n export default function Content4() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n   <img \r\n-    src=\"/images/image.jpg\"\r\n+    src=\"/images/imgfood.jpg\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n   />\r\n   <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n"
+                },
+                {
+                    "date": 1750833176771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n export default function Content4() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n   <img \r\n-    src=\"/images/imgfood.jpg\"\r\n+    src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n   />\r\n   <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n"
+                },
+                {
+                    "date": 1750833233742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image  from 'next/image';\r\n-export default function Content4() {\r\n+export default async function Content4() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n   <img \r\n     src=\"/images/imgfood.png\"\r\n"
+                },
+                {
+                    "date": 1750833310514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Image  from 'next/image';\r\n export default async function Content4() {\r\n   return (\r\n-    <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n+    <div className=\"relative w-full h-150 r overflow-hidden mb-10\">\r\n   <img \r\n     src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n"
+                },
+                {
+                    "date": 1750833336458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Image  from 'next/image';\r\n export default async function Content4() {\r\n   return (\r\n-    <div className=\"relative w-full h-150 r overflow-hidden mb-10\">\r\n+    <div className=\"relative w-full h-160 r overflow-hidden mb-10\">\r\n   <img \r\n     src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n"
+                },
+                {
+                    "date": 1750833364109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <div className=\"relative w-full h-160 r overflow-hidden mb-10\">\r\n   <img \r\n     src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n-    className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n+    className=\"absolute inset-0 w-full h-full object-coveropacity-60\"\r\n   />\r\n   <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n     Welcome to Seafood Shop\r\n   </h1>\r\n"
+                },
+                {
+                    "date": 1750833589248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n     <div className=\"relative w-full h-160 r overflow-hidden mb-10\">\r\n   <img \r\n     src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n-    className=\"absolute inset-0 w-full h-full object-coveropacity-60\"\r\n+    className=\"absolute inset-0 w-full h-full object-cover \"\r\n   />\r\n-  <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n+  < className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n     Welcome to Seafood Shop\r\n-  </h1>\r\n+  </>\r\n </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750833594872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,11 @@\n     src=\"/images/imgfood.png\"\r\n     alt=\"no image seafood\" \r\n     className=\"absolute inset-0 w-full h-full object-cover \"\r\n   />\r\n-  < className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n-    Welcome to Seafood Shop\r\n-  </>\r\n+  <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n+   \r\n+   \r\n+  </div>\r\n </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750833603628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n     className=\"absolute inset-0 w-full h-full object-cover \"\r\n   />\r\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n-   \r\n+      <div>\r\n+        \r\n+      </div>\r\n   </div>\r\n </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750833609095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   />\r\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n-        \r\n+        <div></div>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833615130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   />\r\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n-        <div></div>\r\n+        <div><img src=\"..\" alt=\"\" /></div>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833634908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   />\r\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n-        <div><img src=\"..\" alt=\"\" /></div>\r\n+        <div><img src=\"\" alt=\"\" /></div>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833655717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n         <div><img src=\"\" alt=\"\" /></div>\r\n+        <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">\r\n+          SHRIMP, SCALLOPS & LOBSTERS\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833661294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,9 @@\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n         <div><img src=\"\" alt=\"\" /></div>\r\n-        <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">\r\n-          SHRIMP, SCALLOPS & LOBSTERS\r\n+        <h2></h2>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833671310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   <div className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    \r\n       <div>\r\n         <div><img src=\"\" alt=\"\" /></div>\r\n-        <h2></h2>\r\n+        <h2>Dive In & Explore</h2>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833684399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n    \r\n       <div>\r\n         <div><img src=\"\" alt=\"\" /></div>\r\n         <h2>Dive In & Explore</h2>\r\n+        \r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750833690580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n    \r\n       <div>\r\n         <div><img src=\"\" alt=\"\" /></div>\r\n         <h2>Dive In & Explore</h2>\r\n-         h3\r\n+         <h3></h3>\r\n       </div>\r\n   </div>\r\n </div>\r\n   );\r\n"
+                }
+            ],
+            "date": 1750833147008,
+            "name": "Commit-0",
+            "content": "import Image  from 'next/image';\r\nexport default function Content1() {\r\n  return (\r\n    <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n  <img \r\n    src=\"/images/food.jpg\"\r\n    alt=\"no image seafood\" \r\n    className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n  />\r\n  <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n    Welcome to Seafood Shop\r\n  </h1>\r\n</div>\r\n  );\r\n}"
+        }
+    ]
+}

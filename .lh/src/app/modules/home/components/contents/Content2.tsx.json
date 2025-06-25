@@ -1,0 +1,322 @@
+{
+    "sourceFile": "src/app/modules/home/components/contents/Content2.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 76,
+            "patches": [
+                {
+                    "date": 1750780219957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750780225664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,7 @@\n-export \n\\ No newline at end of file\n+export default function Page() {\r\n+  return (\r\n+    <div className=\"flex items-center justify-center h-screen\">\r\n+      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+    </div>\r\n+  );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780251334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center h-screen\">\r\n+    <div className=\"container\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780262236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"container\">\r\n+    <div className=\"container h\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780270291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"container h\">\r\n+    <div className=\"container h-90 border\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780430382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container h-90 border\">\r\n-      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+      <h1 className=\"text-4xl font-bold\">s Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780444573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container h-90 border\">\r\n-      <h1 className=\"text-4xl font-bold\">s Seafood Shop</h1>\r\n+      <h1 className=\"text-4xl font-bold\">sli Seafood Shop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780456561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container h-90 border\">\r\n-      <h1 className=\"text-4xl font-bold\">sli Seafood Shop</h1>\r\n+      <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780465844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container h-90 border\">\r\n       <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n+      \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780479463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,29 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container h-90 border\">\r\n       <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n-      \r\n+        <div className=\"flex flex-wrap justify-center mt-4\">\r\n+            <div className=\"w-1/3 p-2\">\r\n+            <img\r\n+                src=\"/images/food1.jpg\"\r\n+                alt=\"Seafood Dish 1\"\r\n+                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n+            />\r\n+            </div>\r\n+            <div className=\"w-1/3 p-2\">\r\n+            <img\r\n+                src=\"/images/food2.jpg\"\r\n+                alt=\"Seafood Dish 2\"\r\n+                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n+            />\r\n+            </div>\r\n+            <div className=\"w-1/3 p-2\">\r\n+            <img\r\n+                src=\"/images/food3.jpg\"\r\n+                alt=\"Seafood Dish 3\"\r\n+                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n+            />\r\n+            </div>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780487328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,7 @@\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n     </div>\r\n+    \r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780698817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n       <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n         <div className=\"flex flex-wrap justify-center mt-4\">\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n-                src=\"/images/food1.jpg\"\r\n+                src=\"/images/kab.jpg\"\r\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n@@ -24,7 +24,7 @@\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n     </div>\r\n-    \r\n+    </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780704913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n       <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n         <div className=\"flex flex-wrap justify-center mt-4\">\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n-                src=\"/images/kab.jpg\"\r\n+                src=\"/images/kabpum.jpeg\"\r\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780713669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             />\r\n             </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n-                src=\"/images/food2.jpg\"\r\n+                src=\"/images/koob.jpg\"\r\n                 alt=\"Seafood Dish 2\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780726996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,16 @@\n             />\r\n             </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n-                src=\"/images/koob.jpg\"\r\n+                src=\"/images/koobcws.jpg\"\r\n                 alt=\"Seafood Dish 2\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n-                src=\"/images/food3.jpg\"\r\n+                src=\"/images/kapu.jpg\"\r\n                 alt=\"Seafood Dish 3\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780765318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n                 src=\"/images/kabpum.jpeg\"\r\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n+            di\r\n             </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n                 src=\"/images/koobcws.jpg\"\r\n"
+                },
+                {
+                    "date": 1750780776009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,13 @@\n                 src=\"/images/kabpum.jpeg\"\r\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n-            di\r\n+            <div>\r\n+                <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n+                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ ອາຫານແນວເກົາຫລີ ອາຫານແນວເກົາຫລີ</p>\r\n             </div>\r\n+            </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n                 src=\"/images/koobcws.jpg\"\r\n                 alt=\"Seafood Dish 2\"\r\n"
+                },
+                {
+                    "date": 1750780786369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n-                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ ອາຫານແນວເກົາຫລີ ອາຫານແນວເກົາຫລີ</p>\r\n+                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n"
+                },
+                {
+                    "date": 1750780820597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n+                h\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n                 <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780827848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n-                h\r\n+                <h2>ຄ</h2>\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n                 <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780833356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n-                <h2>ຄ</h2>\r\n+                <h2>ຄາລາ</h2>\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n                 <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780841843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n-                <h2>ຄາລາ</h2>\r\n+                <h2>ຄາລາ: 1</h2>\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n                 <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780850158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                 alt=\"Seafood Dish 1\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n             <div>\r\n-                <h2>ຄາລາ: 1</h2>\r\n+                <h2>ຄາລາ: 100.000kip</h2>\r\n                 <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n                 <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1750780860120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,14 @@\n                 src=\"/images/koobcws.jpg\"\r\n                 alt=\"Seafood Dish 2\"\r\n                 className=\"w-full h-auto rounded-lg shadow-lg\"\r\n             />\r\n+             <div>\r\n+                <h2>ຄາລາ: 100.000kip</h2>\r\n+                <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n+                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n             </div>\r\n+            </div>\r\n             <div className=\"w-1/3 p-2\">\r\n             <img\r\n                 src=\"/images/kapu.jpg\"\r\n                 alt=\"Seafood Dish 3\"\r\n"
+                },
+                {
+                    "date": 1750781037135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,40 +1,54 @@\n export default function Page() {\r\n   return (\r\n-    <div className=\"container h-90 border\">\r\n-      <h1 className=\"text-4xl font-bold\">slide Seafood Menus</h1>\r\n-        <div className=\"flex flex-wrap justify-center mt-4\">\r\n-            <div className=\"w-1/3 p-2\">\r\n-            <img\r\n-                src=\"/images/kabpum.jpeg\"\r\n-                alt=\"Seafood Dish 1\"\r\n-                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n-            />\r\n-            <div>\r\n-                <h2>ຄາລາ: 100.000kip</h2>\r\n-                <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n-                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n-            </div>\r\n-            </div>\r\n-            <div className=\"w-1/3 p-2\">\r\n-            <img\r\n-                src=\"/images/koobcws.jpg\"\r\n-                alt=\"Seafood Dish 2\"\r\n-                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n-            />\r\n-             <div>\r\n-                <h2>ຄາລາ: 100.000kip</h2>\r\n-                <h2 className=\"text-xl font-semibold mt-2\">ປາກະພຸມ</h2>\r\n-                <p className=\"text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ </p>\r\n-            </div>\r\n-            </div>\r\n-            <div className=\"w-1/3 p-2\">\r\n-            <img\r\n-                src=\"/images/kapu.jpg\"\r\n-                alt=\"Seafood Dish 3\"\r\n-                className=\"w-full h-auto rounded-lg shadow-lg\"\r\n-            />\r\n-            </div>\r\n+    <div className=\"container mx-auto py-8\">\r\n+      <h1 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n+\r\n+      {/* Horizontal Scroll Container */}\r\n\\ No newline at end of file\n+      <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n+        {/* Card 1 */}\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+          <img\r\n+            src=\"/images/kabpum.jpeg\"\r\n+            alt=\"Seafood Dish 1\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n+          />\r\n+          <div className=\"mt-2\">\r\n+            <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n+            <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n+            <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n+          </div>\r\n+        </div>\r\n+\r\n+        {/* Card 2 */}\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+          <img\r\n+            src=\"/images/koobcws.jpg\"\r\n+            alt=\"Seafood Dish 2\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n+          />\r\n+          <div className=\"mt-2\">\r\n+            <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n+            <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n+            <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n+          </div>\r\n+        </div>\r\n+\r\n+        {/* Card 3 */}\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+          <img\r\n+            src=\"/images/kapu.jpg\"\r\n+            alt=\"Seafood Dish 3\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n+          />\r\n+          <div className=\"mt-2\">\r\n+            <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n+            <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n+            <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n+          </div>\r\n+        </div>\r\n+\r\n+        {/* Add more cards here... */}\r\n+      </div>\r\n     </div>\r\n-    </div>\r\n   );\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1750781062560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,10 +45,22 @@\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n         </div>\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+          <img\r\n+            src=\"/images/kapu.jpg\"\r\n+            alt=\"Seafood Dish 3\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n+          />\r\n\\ No newline at end of file\n+          <div className=\"mt-2\">\r\n+            <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n+            <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n+            <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n+          </div>\r\n+        </div>\r\n \r\n         {/* Add more cards here... */}\r\n       </div>\r\n     </div>\r\n   );\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1750781069805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,10 @@\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n         </div>\r\n+        {/* Card 4 */}\r\n+\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kapu.jpg\"\r\n             alt=\"Seafood Dish 3\"\r\n@@ -62,5 +64,5 @@\n         {/* Add more cards here... */}\r\n       </div>\r\n     </div>\r\n   );\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1750781116847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kabpum.jpeg\"\r\n             alt=\"Seafood Dish 1\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750781156137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           </div>\r\n         </div>\r\n \r\n         {/* Card 2 */}\r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/koobcws.jpg\"\r\n             alt=\"Seafood Dish 2\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n@@ -33,9 +33,9 @@\n           </div>\r\n         </div>\r\n \r\n         {/* Card 3 */}\r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kapu.jpg\"\r\n             alt=\"Seafood Dish 3\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n@@ -47,9 +47,9 @@\n           </div>\r\n         </div>\r\n         {/* Card 4 */}\r\n \r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kapu.jpg\"\r\n             alt=\"Seafood Dish 3\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750781165942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,23 @@\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n         </div>\r\n+         {/* Card 4 */}\r\n \r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+          <img\r\n+            src=\"/images/kapu.jpg\"\r\n+            alt=\"Seafood Dish 3\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n+          />\r\n+          <div className=\"mt-2\">\r\n+            <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n+            <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n+            <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n+          </div>\r\n+        </div>\r\n+\r\n         {/* Add more cards here... */}\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750781206523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           </div>\r\n         </div>\r\n \r\n         {/* Card 2 */}\r\n-        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[100px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/koobcws.jpg\"\r\n             alt=\"Seafood Dish 2\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n@@ -59,9 +59,9 @@\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n         </div>\r\n-         {/* Card 4 */}\r\n+         {/* Card 5 */}\r\n \r\n         <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kapu.jpg\"\r\n"
+                },
+                {
+                    "date": 1750781237685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         <div className=\"min-w-[100px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/koobcws.jpg\"\r\n             alt=\"Seafood Dish 2\"\r\n-            className=\"w-full h-48 object-cover rounded-md\"\r\n+            className=\"w- object-cover rounded-md\"\r\n           />\r\n           <div className=\"mt-2\">\r\n             <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n"
+                },
+                {
+                    "date": 1750781252953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         <div className=\"min-w-[100px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/koobcws.jpg\"\r\n             alt=\"Seafood Dish 2\"\r\n-            className=\"w- object-cover rounded-md\"\r\n+            className=\"w-full h-48 object-cover rounded-md\"\r\n           />\r\n           <div className=\"mt-2\">\r\n             <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n"
+                },
+                {
+                    "date": 1750781261960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n-        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/kabpum.jpeg\"\r\n             alt=\"Seafood Dish 1\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750781279416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           </div>\r\n         </div>\r\n \r\n         {/* Card 2 */}\r\n-        <div className=\"min-w-[100px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n             src=\"/images/koobcws.jpg\"\r\n             alt=\"Seafood Dish 2\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750781492573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n+      <h className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781500484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h>\r\n+      <h3 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h3>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781509366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h3 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h3>\r\n+      <h4 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h4>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781521297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h4 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h4>\r\n+      <h7 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h7>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781529725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h7 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h7>\r\n+      <h className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781537637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h>\r\n+      <h7 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h7>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781551193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h7 className=\"text-4xl font-bold mb-6 text-center\">Slide Seafood Menus</h7>\r\n+      <h5 className=\"text-4xl font-bold  text-center\">Slide Seafood Menus</h5>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781559492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h5 className=\"text-4xl font-bold  text-center\">Slide Seafood Menus</h5>\r\n+      <h5 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h5>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781573754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h5 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h5>\r\n+      <h2 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h2>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781583406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h2 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h2>\r\n+      <h1 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781589532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\" font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n+      <h1 className=\"text font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781599024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750781614656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-center\">Slide Seafood Menus</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gra text-center\">Slide Seafood Menus</h1>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750782597518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gra text-center\">Slide Seafood Menus</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">Slide Seafood Menus</h1>\r\n \r\n       {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n@@ -74,9 +74,8 @@\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n         </div>\r\n \r\n-        {/* Add more cards here... */}\r\n       </div>\r\n     </div>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1750782608848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">Slide Seafood Menus</h1>\r\n-\r\n-      {/* Horizontal Scroll Container */}\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750782653833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">Slide Seafood Menus</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 transition-transform duration-500 ease-in-out group-hover:scale-105\">\r\n           <img\r\n             src=\"/images/kabpum.jpeg\"\r\n             alt=\"Seafood Dish 1\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750782678317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">Slide Seafood Menus</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n-        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 transition-transform duration-500 ease-in-out group-hover:scale-105\">\r\n+        <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n             src=\"/images/kabpum.jpeg\"\r\n             alt=\"Seafood Dish 1\"\r\n             className=\"w-full h-48 object-cover rounded-md\"\r\n"
+                },
+                {
+                    "date": 1750785582450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">Slide Seafood Menus</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">สินค้าขายดี\r\n+\r\n+อาหารทะเลที่ลูกค้าชื่นชอบมากที่สุด</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n             src=\"/images/kabpum.jpeg\"\r\n             alt=\"Seafood Dish 1\"\r\n-            className=\"w-full h-48 object-cover rounded-md\"\r\n+            className=\"w-full h-48 object-cover rounded-md transition-transform duration-500 ease-in-out group-hover:scale-105\"\r\n           />\r\n           <div className=\"mt-2\">\r\n             <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n"
+                },
+                {
+                    "date": 1750785590196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">สินค้าขายดี\r\n-\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">สินค้าขายด\r\n อาหารทะเลที่ลูกค้าชื่นชอบมากที่สุด</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785610905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gray-500 text-center\">สินค้าขายด\r\n-อาหารทะเลที่ลูกค้าชื่นชอบมากที่สุด</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">สินค้าขายดีอาหารทะเลที่ลูกค้าชื่นชอบมากที่สุด</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785655062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">สินค้าขายดีอาหารทะเลที่ลูกค้าชื่นชอบมากที่สุด</h1>\r\n+      <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785667858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-md font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785676024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n-      <h1 className=\"text-md font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-md font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785707000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-6 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-md font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785720112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-1xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-md font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785733803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-1xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n-      <h1 className=\"text-md font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n+      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785813122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n+      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>satisfactionguarantee_k.webp__PID:c6a55b75-95c7-49e3-b3ac-e33acebf66a7\r\n+100% satisfaction guarantee\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785820039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n       <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>satisfactionguarantee_k.webp__PID:c6a55b75-95c7-49e3-b3ac-e33acebf66a7\r\n-100% satisfaction guarantee\r\n+\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785828075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>satisfactionguarantee_k.webp__PID:c6a55b75-95c7-49e3-b3ac-e33acebf66a7\r\n+      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n \r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n-      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785844051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-      <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n-\r\n+      <div>\r\n+        <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n+      </div>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785854442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n+      <div>\r\n+        \r\n+      </div>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n"
+                },
+                {
+                    "date": 1750785865768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,17 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n+        <div>\r\n+            \r\n+        </div>\r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n       <div>\r\n-        \r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       </div>\r\n-      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785872755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n         <div>\r\n-            \r\n-        </div>\r\n+\r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n       <div>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n       </div>\r\n+        </div>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"min-w-[300px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2 \">\r\n           <img\r\n"
+                },
+                {
+                    "date": 1750785878471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-        <div>\r\n+        <div  className=\"flex flex-col items-center justify-center mb-8\">\r\n \r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n"
+                },
+                {
+                    "date": 1750785885086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-        <div  className=\"flex flex-col items-center justify-center mb-8\">\r\n+        <div  className=\"flex   justify-center mb-8\">\r\n \r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n"
+                },
+                {
+                    "date": 1750785893171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-        <div  className=\"flex   justify-center mb-8\">\r\n+        <div  className=\"flex   justify- mb-8\">\r\n \r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n"
+                },
+                {
+                    "date": 1750785899115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-        <div  className=\"flex   justify- mb-8\">\r\n+        <div  className=\"flex   justify-between mb-8\">\r\n \r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n"
+                },
+                {
+                    "date": 1750785919654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Page() {\r\n   return (\r\n     <div className=\"container mx-auto py-8\">\r\n-        <div  className=\"flex   justify-between mb-8\">\r\n+        <div  className=\"flex  justify-between \">\r\n \r\n       <div>\r\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n"
+                },
+                {
+                    "date": 1750786414336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n       <div>\r\n-      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">100% satisfaction guarantee</h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \"><img src=\"\" alt=\"\" />100% satisfaction guarantee</h1>\r\n       </div>\r\n         </div>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750786421034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n       <div>\r\n-      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \"><img src=\"\" alt=\"\" />100% satisfaction guarantee</h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \"><img src=\"/images/\" alt=\"\" />100% satisfaction guarantee</h1>\r\n       </div>\r\n         </div>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750786427207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <h1 className=\"text-2xl font-bold mb-1 text-gray-500 \">BEST SELLERS</h1>\r\n       <h1 className=\"text-lg font-bold mb-6 text-gray-500 \">The most loved seafoods according to our customers. </h1>\r\n       </div>\r\n       <div>\r\n-      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \"><img src=\"/images/firstC\" alt=\"\" />100% satisfaction guarantee</h1>\r\n+      <h1 className=\"text-lg font-bold mb-6 text-gray-500 \"><img src=\"/images/firstCh\" alt=\"\" />100% satisfaction guarantee</h1>\r\n       </div>\r\n         </div>\r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n"
+                },
+                {
+                    "date": 1750786881980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             <h2 className=\"font-semibold text-gray-800\">ປາກະພຸມ</h2>\r\n             <p className=\"text-sm text-gray-600\">ປາກະພຸມ ອາຫານແນວເກົາຫລີ</p>\r\n             <p className=\"text-sm text-blue-500 mt-1\">ຄາລາ: 100.000kip</p>\r\n           </div>\r\n-          <button className=\"bg-green-500\">Add To Cart</button>\r\n+          <button className=\"bg-green-500 te\">Add To Cart</button>\r\n         </div>\r\n \r\n         {/* Card 2 */}\r\n         <div className=\"min-w-[200px] flex-shrink-0 bg-white rounded-lg shadow-lg p-2\">\r\n"
+                }
+            ],
+            "date": 1750780219957,
+            "name": "Commit-0",
+            "content": "export "
+        }
+    ]
+}

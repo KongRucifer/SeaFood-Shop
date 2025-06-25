@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/modules/home/views/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1750776492513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750776500727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export\n\\ No newline at end of file\n+export default function Page() {\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750776508947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,7 @@\n-export default function Page() {\n\\ No newline at end of file\n+export default function Page() {\r\n+  return (\r\n+    <div className=\"flex items-center justify-center h-screen\">\r\n+      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+    </div>\r\n+  );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750777394124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export default function Page() {\r\n+export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1750777414037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n-      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+      <h1 className=\"text-4xl font-bold\">Welcome to Seafood kShop</h1>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750777525382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +0,0 @@\n-export default function Home() {\r\n-  return (\r\n-    <div className=\"flex items-center justify-center h-screen\">\r\n-      <h1 className=\"text-4xl font-bold\">Welcome to Seafood kShop</h1>\r\n-    </div>\r\n-  );\r\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1750776492513,
+            "name": "Commit-0",
+            "content": "export"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app/middleware.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1750849062612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750849073122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,8 @@\n   if (request.nextUrl.pathname === '/') {\r\n     return NextResponse.redirect(new URL('/home', request.url));\r\n   }\r\n }\r\n+\r\n+export const config = {\r\n+  matcher: ['/'],\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750849088352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n   }\r\n }\r\n \r\n export const config = {\r\n-  matcher: ['/'],\r\n+  matcher: ['/',''],\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750849094699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,6 @@\n   }\r\n }\r\n \r\n export const config = {\r\n-  matcher: ['/',''],\r\n+  matcher: ['/','mu'],\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750849113916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { NextRequest } from 'next/server';\r\n \r\n export function middleware(request: NextRequest) {\r\n   if (request.nextUrl.pathname === '/') {\r\n-    return NextResponse.redirect(new URL('/home', request.url));\r\n+    return NextResponse.redirect(new URL('/modules/', request.url));\r\n   }\r\n }\r\n \r\n export const config = {\r\n"
+                },
+                {
+                    "date": 1750849132560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n import type { NextRequest } from 'next/server';\r\n \r\n export function middleware(request: NextRequest) {\r\n   if (request.nextUrl.pathname === '/') {\r\n-    return NextResponse.redirect(new URL('/modules/', request.url));\r\n+    return NextResponse.redirect(new URL('/modules/home/views', request.url));\r\n   }\r\n }\r\n \r\n export const config = {\r\n-  matcher: ['/','mu'],\r\n+  matcher: ['/','/modules/home/views'],\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750849297491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+// middleware.ts\r\n+import { NextResponse } from 'next/server';\r\n+import type { NextRequest } from 'next/server';\r\n+\r\n+export function middleware(request: NextRequest) {\r\n+  if (request.nextUrl.pathname === '/') {\r\n+    return NextResponse.redirect(new URL('/modules/home/views', request.url));\r\n+  }\r\n+}\r\n+\r\n+export const config = {\r\n+  matcher: ['/','/modules/home/views'],\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750849431067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,21 +2,10 @@\n import { NextResponse } from 'next/server';\r\n import type { NextRequest } from 'next/server';\r\n \r\n export function middleware(request: NextRequest) {\r\n-  if (request.nextUrl.pathname === '/') {\r\n-    return NextResponse.redirect(new URL('/modules/home/views', request.url));\r\n-  }\r\n-}\r\n+    console.log(\"✅ Middleware is running for path:\", request.nextUrl.pathname);\r\n \r\n-export const config = {\r\n-  matcher: ['/','/modules/home/views'],\r\n-};\n-// middleware.ts\r\n-import { NextResponse } from 'next/server';\r\n-import type { NextRequest } from 'next/server';\r\n-\r\n-export function middleware(request: NextRequest) {\r\n   if (request.nextUrl.pathname === '/') {\r\n     return NextResponse.redirect(new URL('/modules/home/views', request.url));\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1750849062612,
+            "name": "Commit-0",
+            "content": "// middleware.ts\r\nimport { NextResponse } from 'next/server';\r\nimport type { NextRequest } from 'next/server';\r\n\r\nexport function middleware(request: NextRequest) {\r\n  if (request.nextUrl.pathname === '/') {\r\n    return NextResponse.redirect(new URL('/home', request.url));\r\n  }\r\n}\r\n"
+        }
+    ]
+}

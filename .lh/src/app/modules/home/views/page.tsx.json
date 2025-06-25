@@ -1,0 +1,186 @@
+{
+    "sourceFile": "src/app/modules/home/views/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 42,
+            "patches": [
+                {
+                    "date": 1750778590843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750778614796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+\r\n export default function Home() {\r\n   return (\r\n-    \r\n+    <div className=\"flex items-center justify-center h-screen\">\r\n+      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+    </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778623094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import \r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n"
+                },
+                {
+                    "date": 1750778628785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import \r\n+import Content1\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n"
+                },
+                {
+                    "date": 1750778666186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import Content1\r\n+import Content1 from \"../components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n-      <h1 className=\"text-4xl font-bold\">Welcome to Seafood Shop</h1>\r\n+      \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778684071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import Content1 from \"../components/contents/content1\";\r\n+import Content1 from \"@components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n-      \r\n+      <Content1 />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750778690450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@components/contents/content1\";\r\n+import Content1 from \"@modules/home/components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778696221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@modules/home/components/contents/content1\";\r\n+import C\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778705301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import C\r\n+import Content1 from \"../components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778756253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"../components/contents/content1\";\r\n+import Content1 from \"@\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778762149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@\";\r\n+import Content1 from \"@/app\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778768409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@/app\";\r\n+import Content1 from \"@/app/modules/home/\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778773666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@/app/modules/home/\";\r\n+import Content1 from \"@/app/modules/home/components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778912307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@/app/modules/home/components/contents/content1\";\r\n+import Content1 from \"@/modules/home/components/contents/content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778934872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@/modules/home/components/contents/content1\";\r\n+import Content1 from \"@\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778951572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@\";\r\n+import Content1 from \"@/app\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778958161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Content1 from \"@/app\";\r\n+import Content1 from \"@/app/\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750778963309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import Content1 from \"@/app/\";\r\n-export default function Home() {\r\n+import Content1 from \"@/app/modules/home/components/\";\r\n+export default function Home() {/\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1750778971450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n-import Content1 from \"@/app/modules/home/components/\";\r\n-export default function Home() {/\r\n+import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n+export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center h-screen\">\r\n       <Content1 />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1750779021571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center h-screen\">\r\n+    <div className=\"flex items-center justify-center \">\r\n       <Content1 />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780281818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n+import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center \">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750780286996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n-import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n+import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center \">\r\n       <Content1 />\r\n"
+                },
+                {
+                    "date": 1750780294630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,9 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex items-center justify-center \">\r\n       <Content1 />\r\n+      <Content2 />\r\n+     \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780322454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n export default function Home() {\r\n   return (\r\n-    <div className=\"flex items-center justify-center \">\r\n+    <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />\r\n       <Content2 />\r\n-     \r\n+    \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750780344498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />\r\n+      \r\n       <Content2 />\r\n     \r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750780352365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />\r\n-      \r\n+    \r\n       <Content2 />\r\n     \r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750782576849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n-      <Content1 />\r\n-    \r\n+      <Content1 />   \r\n       <Content2 />\r\n     \r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750787673567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n+import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n-      <Content2 />\r\n-    \r\n+      <Content2 />  \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750787680171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n-import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n+import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n-      <Content2 />  \r\n+      <Content2 /> \r\n+       \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750787688242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n-       \r\n+      <Content3 />\r\n+      {/* Add more content components as needed */}\r\n+\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750817049906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,7 @@\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n       <Content3 />\r\n-      {/* Add more content components as needed */}\r\n-\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750833186387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n       <Content3 />\r\n+      \r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750833195504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n+import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n       <Content3 />\r\n-      \r\n+      <Content4 />\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750836244501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n+import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836251413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n+import C\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836259970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import C\r\n+import Content\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836265032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import Content\r\n+import <Content5></Content5>\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836270393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import <Content5></Content5>\r\n+import Content5 f\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836282887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import Content5 f\r\n+import Content5 from \r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n"
+                },
+                {
+                    "date": 1750836293837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import Content5 from \r\n+import Content5 from \"@/app/modules/home/components/contents/Content5\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n       <Content3 />\r\n       <Content4 />\r\n+      <C\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750855682445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n-import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n-import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n-import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n-import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n-import Content5 from \"@/app/modules/home/components/contents/Content5\";\r\n+// import Content1 from \"@/app/modules/home/components/contents/Content1\";\r\n+// import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n+// import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n+// import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n+// import Content5 from \"@/app/modules/home/components/contents/Content5\";\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n       <Content1 />   \r\n       <Content2 /> \r\n       <Content3 />\r\n       <Content4 />\r\n-      <C\r\n+      <Content5/>\r\n     </div>\r\n   );\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1750855691953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n // import Content2 from \"@/app/modules/home/components/contents/Content2\";\r\n // import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n // import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n // import Content5 from \"@/app/modules/home/components/contents/Content5\";\r\n-\r\n+impo\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n      \r\n"
+                },
+                {
+                    "date": 1750855710553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n // import Content3 from \"@/app/modules/home/components/contents/Content3\";\r\n // import Content4 from \"@/app/modules/home/components/contents/Content4\";\r\n // import Content5 from \"@/app/modules/home/components/contents/Content5\";\r\n import Banner from \"../components/Banner.component\";\r\n-import B\r\n+import Be\r\n export default function Home() {\r\n   return (\r\n     <div className=\"flex flex-col items-center justify-center \">\r\n      \r\n"
+                }
+            ],
+            "date": 1750778590843,
+            "name": "Commit-0",
+            "content": "export default function Home() {\r\n  return (\r\n    \r\n  );\r\n}"
+        }
+    ]
+}

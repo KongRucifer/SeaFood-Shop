@@ -1,0 +1,22 @@
+{
+    "sourceFile": "next-sitemap.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1750753497107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750753521149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-module.exports = {\r\n+export default {\r\n   siteUrl: 'https://yourdomain.com',\r\n   generateRobotsTxt: true,\r\n-}\r\n+};\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1750753497107,
+            "name": "Commit-0",
+            "content": "module.exports = {\r\n  siteUrl: 'https://yourdomain.com',\r\n  generateRobotsTxt: true,\r\n}\r\n"
+        }
+    ]
+}
