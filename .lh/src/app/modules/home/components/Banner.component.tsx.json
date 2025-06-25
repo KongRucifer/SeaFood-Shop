@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1750855443396,
@@ -20,6 +20,10 @@
                 {
                     "date": 1750858462854,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n-import Image  from 'next/image';\r\n-export default async function Ban() {\r\n+import Image from \"next/image\";\r\n+export default async function Banner() {\r\n   return (\r\n     <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n-  <img \r\n-    src=\"/images/food.jpg\"\r\n-    alt=\"no image seafood\" \r\n-    className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n-  />\r\n-  <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n-    Welcome to Seafood Shop\r\n-  </h1>\r\n-</div>\r\n\\ No newline at end of file\n+      <img\r\n+        src=\"/images/food.jpg\"\r\n+        alt=\"no image seafood\"\r\n+        className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n+      />\r\n+      <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n+        Welcome to Seafood Shop\r\n+      </h1>\r\n+    </div>\r\n   );\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1750863498595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,16 @@\n import Image from \"next/image\";\r\n-export default async function Banner() {\r\n+\r\n+export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n-      <img\r\n+    <div className=\"relative w-full h-[520px] overflow-hidden mb-10\">\r\n+      <Image\r\n         src=\"/images/food.jpg\"\r\n         alt=\"no image seafood\"\r\n-        className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n+        layout=\"fill\"\r\n+        objectFit=\"cover\"\r\n+        className=\"opacity-60\"\r\n+        priority\r\n       />\r\n       <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n         Welcome to Seafood Shop\r\n       </h1>\r\n"
                 }
             ],
             "date": 1750855443396,

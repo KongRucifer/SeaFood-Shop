@@ -76,8 +76,8 @@ export default function Footer() {
                 <Image
                   src="/images/star.png"
                   alt="Star Logo"
-                  width={54}
-                  height={54}
+                  width={44}
+                  height={44}
                   className="-mt-5"
                 />
                 <h3>SEAFOOD SHOP</h3>

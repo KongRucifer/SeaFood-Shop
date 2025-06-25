@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 export default async function Navbar() {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow-md fixed top-0 left-0 z-50 w-full">

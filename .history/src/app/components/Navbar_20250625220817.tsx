@@ -6,12 +6,10 @@ export default async function Navbar() {
       <div className="container mx-auto">
         <div className=" flex flex-wrap items-center justify-between  p-4">
           <div className="flex items-center">
-            <Image
+            <img
               src="/images/lets-icons_shop.png"
+              className="h-8 mr-3"
               alt="Seafood Shop Logo"
-              width={32}
-              height={32}
-              className="mr-3"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Seafood Shop

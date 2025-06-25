@@ -76,7 +76,7 @@ export default function Footer() {
                 <Image
                   src="/images/star.png"
                   alt="Star Logo"
-                  width={54}
+                  width={44}
                   height={54}
                   className="-mt-5"
                 />

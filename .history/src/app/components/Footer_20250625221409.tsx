@@ -76,8 +76,8 @@ export default function Footer() {
                 <Image
                   src="/images/star.png"
                   alt="Star Logo"
-                  width={54}
-                  height={54}
+                  width={24}
+                  height={24}
                   className="-mt-5"
                 />
                 <h3>SEAFOOD SHOP</h3>
@@ -121,8 +121,8 @@ export default function Footer() {
                     <Image
                       src="/images/twitter.png"
                       alt="Twitter"
-                      width={24}
-                      height={24}
+                      width={34}
+                      height={34}
                     />
                   </a>
                 </li>
