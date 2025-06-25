@@ -8,7 +8,7 @@ export default async function Footer() {
               <h3 className="mb-5 text-green-500">FULTON FISH MARKET</h3>
               <div>
                 <p className="text-md">
-                  Opened in 1822, Lak 52 City don&apos;t s Fulton Fish Market is one of{" "}
+                  Opened in 1822, Lak 52 City don&apos;ts Fulton Fish Market is one of{" "}
                 </p>
                 <p className="text-md">
                   the oldest fish markets in Laos. We offer the world&apos;s
