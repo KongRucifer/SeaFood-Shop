@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     title: "ຮ້ານຂາຍອາຫານທະເລ - ໜ້າທຳອິດ | Seafood Shop",
     description:
       "ສັ່ງຊື້ອາຫານທະເລ ລາຄາຖືກ ສົ່ງໄວ ທັນໃຈ ມີບໍລິການໂອນເງີນ ປາຍທາງ",
-    images: ["https://seafoodshopkong.netlify.app/images/seafood2.jpeg"],
+    images: ["http://localhost:3000/images/seafood2.jpeg"],
   },
   alternates: {
-    canonical: "https://seafoodshopkong.netlify.app/modules/home/views/",
+    canonical: "https://yourdomain.com/",
   },
 
 }

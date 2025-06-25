@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     images: ["https://seafoodshopkong.netlify.app/images/seafood2.jpeg"],
   },
   alternates: {
-    canonical: "https://seafoodshopkong.netlify.app/modules/home/views/",
+    canonical: "https://seafoodshopkong.netlify.app/mo",
   },
 
 }
