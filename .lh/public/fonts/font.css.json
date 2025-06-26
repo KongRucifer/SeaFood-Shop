@@ -1,0 +1,38 @@
+{
+    "sourceFile": "public/fonts/font.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1750905305892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750906868715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n @font-face {\r\n   font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Regular.woff2') format('woff2');\r\n+  src: url('/fonts/NotoSansLao-Regular.ttf') format('woff2');\r\n   font-weight: 400;\r\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n"
+                },
+                {
+                    "date": 1750906874509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n @font-face {\r\n   font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Bold.woff2') format('woff2');\r\n+  src: url('/fonts/NotoSansLao-Bold.ttf') format('woff2');\r\n   font-weight: 700;\r\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n"
+                },
+                {
+                    "date": 1750906950455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n @font-face {\r\n   font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Regular.ttf') format('woff2');\r\n+  src: url('/fonts/NotoSansLao-Regular.ttf') format('truetype');\r\n   font-weight: 400;\r\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n \r\n @font-face {\r\n   font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Bold.ttf') format('woff2');\r\n+  src: url('/fonts/NotoSansLao-Bold.ttf') format('truetype');\r\n   font-weight: 700;\r\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n"
+                },
+                {
+                    "date": 1750910607166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,7 @@\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n \r\n-@font-face {\r\n-  font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Bold.ttf') format('truetype');\r\n-  font-weight: 700;\r\n-  font-display: swap;\r\n-  font-style: normal;\r\n-}\r\n-\r\n body {\r\n   font-family: 'Noto Sans Lao', sans-serif;\r\n }\r\n"
+                },
+                {
+                    "date": 1750911515138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n @font-face {\r\n   font-family: 'Noto Sans Lao';\r\n-  src: url('/fonts/NotoSansLao-Regular.ttf') format('truetype');\r\n+  src: url('/fonts/NotoSansLao-Regular.woff') format('truetype');\r\n   font-weight: 400;\r\n   font-display: swap;\r\n   font-style: normal;\r\n }\r\n"
+                }
+            ],
+            "date": 1750905305892,
+            "name": "Commit-0",
+            "content": "@font-face {\r\n  font-family: 'Noto Sans Lao';\r\n  src: url('/fonts/NotoSansLao-Regular.woff2') format('woff2');\r\n  font-weight: 400;\r\n  font-display: swap;\r\n  font-style: normal;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'Noto Sans Lao';\r\n  src: url('/fonts/NotoSansLao-Bold.woff2') format('woff2');\r\n  font-weight: 700;\r\n  font-display: swap;\r\n  font-style: normal;\r\n}\r\n\r\nbody {\r\n  font-family: 'Noto Sans Lao', sans-serif;\r\n}\r\n"
+        }
+    ]
+}

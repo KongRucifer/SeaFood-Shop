@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1750855443396,
@@ -24,6 +24,22 @@
                 {
                     "date": 1750863498595,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,16 @@\n import Image from \"next/image\";\r\n-export default async function Banner() {\r\n+\r\n+export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-130 r overflow-hidden mb-10\">\r\n-      <img\r\n+    <div className=\"relative w-full h-[520px] overflow-hidden mb-10\">\r\n+      <Image\r\n         src=\"/images/food.jpg\"\r\n         alt=\"no image seafood\"\r\n-        className=\"absolute inset-0 w-full h-full object-cover opacity-60\"\r\n+        layout=\"fill\"\r\n+        objectFit=\"cover\"\r\n+        className=\"opacity-60\"\r\n+        priority\r\n       />\r\n       <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n         Welcome to Seafood Shop\r\n       </h1>\r\n"
+                },
+                {
+                    "date": 1750913140924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,31 @@\n import Image from \"next/image\";\r\n \r\n export default function Banner() {\r\n   return (\r\n-    <div className=\"relative w-full h-[520px] overflow-hidden mb-10\">\r\n+    <div className=\"relative w-full overflow-hidden mb-10\r\n+                    h-[300px]       // base height for xs\r\n+                    sm:h-[400px]    // small screens\r\n+                    md:h-[480px]    // medium screens\r\n+                    lg:h-[520px]    // large screens\r\n+                    xl:h-[600px]    // extra large screens\r\n+                  \">\r\n       <Image\r\n         src=\"/images/food.jpg\"\r\n         alt=\"no image seafood\"\r\n         layout=\"fill\"\r\n         objectFit=\"cover\"\r\n         className=\"opacity-60\"\r\n         priority\r\n       />\r\n-      <h1 className=\"relative z-10 flex items-center justify-center h-full text-4xl font-bold text-gray-700\">\r\n+      <h1 className=\"relative z-10 flex items-center justify-center h-full\r\n+                    text-2xl        // base font size\r\n+                    sm:text-3xl     // small\r\n+                    md:text-4xl     // medium\r\n+                    lg:text-5xl     // large\r\n+                    xl:text-6xl     // xl\r\n+                    font-bold text-gray-700\r\n+                  \">\r\n         Welcome to Seafood Shop\r\n       </h1>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1750913702441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export default function Banner() {\r\n   return (\r\n     <div className=\"relative w-full overflow-hidden mb-10\r\n-                    h-[300px]       // base height for xs\r\n+                    h-[300px]       \r\n                     sm:h-[400px]    // small screens\r\n                     md:h-[480px]    // medium screens\r\n                     lg:h-[520px]    // large screens\r\n                     xl:h-[600px]    // extra large screens\r\n"
+                },
+                {
+                    "date": 1750913716845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n                     h-[300px]       \r\n                     sm:h-[400px]    \r\n                     md:h-[480px]    \r\n                     lg:h-[520px]\r\n-                    xl:h-[600px]    // extra large screens\r\n+                    xl:h-[600px]    \r\n                   \">\r\n       <Image\r\n         src=\"/images/food.jpg\"\r\n         alt=\"no image seafood\"\r\n"
+                },
+                {
+                    "date": 1750913717948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n         className=\"opacity-60\"\r\n         priority\r\n       />\r\n       <h1 className=\"relative z-10 flex items-center justify-center h-full\r\n-                    text-2xl        // base font size\r\n-                    sm:text-3xl     // small\r\n+                    text-2xl       \r\n+                    sm:text-3xl   \r\n                     md:text-4xl     // medium\r\n                     lg:text-5xl     // large\r\n                     xl:text-6xl     // xl\r\n                     font-bold text-gray-700\r\n"
                 }
             ],
             "date": 1750855443396,

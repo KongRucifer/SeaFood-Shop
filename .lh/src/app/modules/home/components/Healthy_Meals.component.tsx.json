@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 17,
+            "activePatchIndex": 18,
             "patches": [
                 {
                     "date": 1750855494740,
@@ -76,6 +76,10 @@
                 {
                     "date": 1750858296259,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,9 @@\n           </div>\r\n           <div className=\"mt-2\">\r\n             <h4 className=\"font-semibold text-gray-800\">slightly sweet shellfish.</h4>\r\n             <p className=\"text-sm text-gray-600\">Rich and buttery meat</p>\r\n-            <p className=\"text-sm text-green-500 mt-1\">price: $</p>\r\n+            <p className=\"text-sm text-green-500 mt-1\">price: $2</p>\r\n           </div>\r\n           <div className=\"flex justify-center mt-4\">\r\n             <button className=\"min-w-[200px] flex-shrink-0  rounded-lg shadow-lg p-5 cursor-pointer bg-green-500 hover:bg-green-700 text-white transform transition duration-300 hover:scale-105\">\r\n               Add To Cart\r\n"
+                },
+                {
+                    "date": 1750906458807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n       <div className=\"flex overflow-x-auto space-x-4 pb-4\">\r\n         {/* Card 1 */}\r\n         <div className=\"w-72 flex-shrink-0 bg-white rounded-lg shadow-lg p-5 transform transition duration-300 hover:scale-105\">\r\n-        \r\n+        d\r\n           <Image\r\n             src=\"/images/shak.webp\"\r\n             alt=\"Seafood Dish 1\"\r\n             width={300}\r\n"
                 }
             ],
             "date": 1750855494740,

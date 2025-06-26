@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Noto Sans Lao';
+  src: url('/fonts/NotoSansLao-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Lao';
+  src: url('/fonts/NotoSansLao-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Noto Sans Lao', sans-serif;
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1750853672104,
@@ -20,6 +20,10 @@
                 {
                     "date": 1750864097884,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,7 @@\n             </Link>\r\n           </div>\r\n         </div>\r\n       </div>\r\n-    </na\n\\ No newline at end of file\n+    </nav>\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1750912874564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n             </button>\r\n           </div>\r\n \r\n           {/* Desktop Menu */}\r\n-          <div className=\"hidden sm:flex sm:flex gap-4 md:gap-6 items-center\">\r\n+          <div className=\"hidden md:flex sm:flex gap-4 md:gap-6 items-center\">\r\n             <Link href=\"/\" className=\"hover:text-green-500 transition\">Home</Link>\r\n             <Link href=\"/\" className=\"hover:text-green-500 transition\">About Shop</Link>\r\n             <Link href=\"/\" className=\"hover:text-green-500 transition\">Contact Us</Link>\r\n             <Link href=\"/\" className=\"border border-green-500 text-green-500 px-4 py-2 rounded hover:bg-green-50 transition\">Sign Up</Link>\r\n"
                 }
             ],
             "date": 1750853672104,

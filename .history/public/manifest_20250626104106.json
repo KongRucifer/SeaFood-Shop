@@ -1,0 +1,20 @@
+{
+  "name": "ຮ້ານຂາຍອາຫານທະເລ",
+  "short_name": "Seafood Shop",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logoShop.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

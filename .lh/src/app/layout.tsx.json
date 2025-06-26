@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 32,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1750749777767,
@@ -136,6 +136,10 @@
                 {
                     "date": 1750771466780,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { Metadata } from \"next\";\n import { Geist, Geist_Mono } from \"next/font/google\";\n import \"./globals.css\";\n import Navbar from \"@/components/Navbar\";\n-import \n+import Footer from \"@/components/Footer\";\n  const geistSans = Geist({\n   variable: \"--font-geist-sans\",\n   subsets: [\"latin\"],\n });\n"
+                },
+                {
+                    "date": 1750901305852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,11 @@\n   children: React.ReactNode;\n }>) {\n   return (\n     <html lang=\"lo\" className={notoSansLao.variable}>\n-      <head></head>\n+      <head>\n+        \n+      </head>\n       <body\n         className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n       >\n         <Navbar />\n"
                 }
             ],
             "date": 1750749777767,

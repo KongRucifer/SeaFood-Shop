@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1750754263039,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750905881361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n-<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n+<sitemapindex xmlns=\"https://seafoodshopkong.netlify.app/sitemap/0.9\">\n   <sitemap>\n     <loc>https://example.com/sitemap-pages.xml</loc>\n     <lastmod>2025-06-24</lastmod>\n   </sitemap>\n"
+                },
+                {
+                    "date": 1750905888157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <sitemapindex xmlns=\"https://seafoodshopkong.netlify.app/sitemap/0.9\">\n   <sitemap>\n-    <loc>https://example.com/sitemap-pages.xml</loc>\n+    <loc>https://seafoodshopkong.netlify.app/sitemap-pages.xml</loc>\n     <lastmod>2025-06-24</lastmod>\n   </sitemap>\n   <sitemap>\n     <loc>https://example.com/sitemap-posts.xml</loc>\n"
+                },
+                {
+                    "date": 1750905893547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n     <loc>https://seafoodshopkong.netlify.app/sitemap-pages.xml</loc>\n     <lastmod>2025-06-24</lastmod>\n   </sitemap>\n   <sitemap>\n-    <loc>https://example.com/sitemap-posts.xml</loc>\n+    <loc>https://seafoodshopkong.netlify.app/sitemap-posts.xml</loc>\n     <lastmod>2025-06-24</lastmod>\n   </sitemap>\n </sitemapindex>\n"
                 }
             ],
             "date": 1750754263039,
