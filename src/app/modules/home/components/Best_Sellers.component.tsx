@@ -62,27 +62,33 @@ export default function Best_Sellers() {
         ].map((item, index) => (
           <div
             key={index}
-            className="min-w-[240px] sm:min-w-[260px] md:min-w-[280px] lg:min-w-[300px] bg-white rounded-lg shadow-lg p-5 transform transition duration-300 hover:scale-105"
+            className="min-w-[240px] sm:min-w-[260px] md:min-w-[280px] lg:min-w-[300px] bg-white rounded-lg shadow-lg p-5 transform transition duration-300 hover:scale-105 flex flex-col justify-between h-[400px]"
           >
-            <div className="overflow-hidden rounded-md relative w-full h-40 sm:h-44 md:h-48 lg:h-52">
-              <div className="relative w-full h-[300px]">
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  className="rounded-md object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  fill                
-                />
+            <div>
+              <div className="overflow-hidden rounded-md relative w-full h-40 sm:h-44 md:h-48 lg:h-52">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-md object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    fill
+                  />
+                </div>
+              </div>
+              <div className="mt-2">
+                <h4 className="text-base sm:text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-gray-600">{item.desc}</p>
+                <p className="text-sm text-green-500 mt-1">
+                  price: {item.price}
+                </p>
               </div>
             </div>
-            <div className="mt-2">
-              <h4 className="text-base sm:text-lg font-semibold text-gray-800">
-                {item.title}
-              </h4>
-              <p className="text-sm text-gray-600">{item.desc}</p>
-              <p className="text-sm text-green-500 mt-1">price: {item.price}</p>
-            </div>
-            <div className="flex justify-center mt-4">
+
+            {/* Make button stay at bottom */}
+            <div className="mt-4">
               <button className="w-full sm:min-w-[160px] md:min-w-[180px] lg:min-w-[200px] rounded-lg shadow-md p-3 sm:p-4 bg-green-500 hover:bg-green-700 text-white transition-transform duration-300 hover:scale-105">
                 Add To Cart
               </button>

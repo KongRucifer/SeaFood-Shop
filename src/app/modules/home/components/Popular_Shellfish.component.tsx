@@ -47,8 +47,10 @@ export default async function Popular_Shellfish() {
         ].map((item, i) => (
           <div
             key={i}
-            className="w-64 sm:w-72 md:w-80 lg:w-80 xl:w-[340px] flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105"
+            className="flex flex-col justify-between h[w-400px] w-64 sm:w-72 md:w-80 lg:w-80 xl:w-[340px] flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105"
           >
+            <div>
+
             <div>
 
             <Image
@@ -67,6 +69,7 @@ export default async function Popular_Shellfish() {
               <p className="text-xs sm:text-sm text-green-500 mt-1">
                 price: {item.price}
               </p>
+            </div>
             </div>
             <div className="flex justify-center mt-4">
               <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] p-3 sm:p-4 rounded-lg shadow-lg cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">

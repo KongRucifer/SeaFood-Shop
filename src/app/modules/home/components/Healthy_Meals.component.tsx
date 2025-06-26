@@ -14,8 +14,10 @@ export default function Healthy_Meals() {
       </div>
 
       <div className="flex overflow-x-auto space-x-3 sm:space-x-4 md:space-x-6 pb-4">
+        
         {/* Card 1 */}
-        <div className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div className="w-56 flex flex-col justify-between h[w-400px] sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div>     
           <div>
             <Image
               src="/images/shak.webp"
@@ -33,6 +35,7 @@ export default function Healthy_Meals() {
             <p className="text-xs sm:text-sm text-gray-600">Best seafood</p>
             <p className="text-xs sm:text-sm text-green-500 mt-1">price: $80</p>
           </div>
+        </div>
           <div className="flex justify-center mt-4">
             <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] rounded-lg shadow-lg p-3 sm:p-4 cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">
               Add To Cart
@@ -41,7 +44,9 @@ export default function Healthy_Meals() {
         </div>
 
         {/* Card 2 */}
-        <div className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div className=" flex flex-col justify-between h[w-400px] w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+         <div>
+
           <div>
             <Image
               src="/images/xaspus.webp"
@@ -60,6 +65,7 @@ export default function Healthy_Meals() {
             </p>
             <p className="text-xs sm:text-sm text-green-500 mt-1">price: $100</p>
           </div>
+         </div>
           <div className="flex justify-center mt-4">
             <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] rounded-lg shadow-lg p-3 sm:p-4 cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">
               Add To Cart
@@ -68,7 +74,9 @@ export default function Healthy_Meals() {
         </div>
 
         {/* Card 3 */}
-        <div className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div className=" flex flex-col justify-between h[w-400px] w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+         <div>
+
           <div>
             <Image
               src="/images/xibxus.jpg"
@@ -87,6 +95,7 @@ export default function Healthy_Meals() {
             </p>
             <p className="text-xs sm:text-sm text-green-500 mt-1">price: $200</p>
           </div>
+         </div>
           <div className="flex justify-center mt-4">
             <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] rounded-lg shadow-lg p-3 sm:p-4 cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">
               Add To Cart
@@ -95,7 +104,9 @@ export default function Healthy_Meals() {
         </div>
 
         {/* Card 4 */}
-        <div className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div className=" flex flex-col justify-between h[w-400px] w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+       <div>
+
           <div>
             <Image
               src="/images/xusxib.webp"
@@ -112,6 +123,7 @@ export default function Healthy_Meals() {
             <p className="text-xs sm:text-sm text-gray-600">Rich and buttery meat</p>
             <p className="text-xs sm:text-sm text-green-500 mt-1">price: $230</p>
           </div>
+       </div>
           <div className="flex justify-center mt-4">
             <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] rounded-lg shadow-lg p-3 sm:p-4 cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">
               Add To Cart
@@ -120,7 +132,9 @@ export default function Healthy_Meals() {
         </div>
 
         {/* Card 5 */}
-        <div className="w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+        <div className="flex flex-col justify-between h[w-400px] w-56 sm:w-64 md:w-72 lg:w-80 flex-shrink-0 bg-white rounded-lg shadow-lg p-4 sm:p-5 transform transition duration-300 hover:scale-105">
+         <div>
+
           <div>
             <Image
               src="/images/content3food.webp"
@@ -139,6 +153,7 @@ export default function Healthy_Meals() {
             </p>
             <p className="text-xs sm:text-sm text-green-500 mt-1">price: $50</p>
           </div>
+         </div>
           <div className="flex justify-center mt-4">
             <button className="min-w-[150px] sm:min-w-[180px] md:min-w-[200px] rounded-lg shadow-lg p-3 sm:p-4 cursor-pointer bg-green-500 hover:bg-green-700 text-white transition duration-300">
               Add To Cart

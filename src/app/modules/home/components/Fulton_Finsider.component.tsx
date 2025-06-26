@@ -61,7 +61,7 @@ export default function Fulton_Finsider() {
             <p className="text-sm sm:text-base mb-4 font-medium text-white">
               {card.tip}
             </p>
-            <button className="px-4 py-2 sm:px-5 sm:py-2 bg-white border border-gray-300 text-gray-600 rounded hover:bg-gray-100 transition">
+            <button className="px-4 py-2 sm:px-5 sm:py-2 bg-white border border-gray-300 text-gray-600 rounded hover:bg-gray-100 transition mb-6">
               {card.button}
             </button>
           </div>
